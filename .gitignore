@@ -1,0 +1,27 @@
+# Maven build output
+/target/
+
+# IDE files
+/.idea/
+*.iml
+*.ipr
+*.iws
+/.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Generated metadata
+.mvn/
+.classpath
+.project
+.settings/
+
+# Keep only project source and config files
+!pom.xml
+!/src/
