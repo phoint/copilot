@@ -4,6 +4,36 @@
 
 This is a Spring Boot application implementing reusable User Management building blocks for an e-commerce system. The implementation follows best practices for layered architecture, validation, security, and testing.
 
+## Question to Answer
+
+### 1. When generating the UserDTO, Copilot added validation annotations like @Email and @Size. Why is it better to perform validation at the DTO level (in the Controller layer) rather than directly on the JPA Entity?
+
+Performing validation at the DTO level (Controller layer) is better than on the JPA Entity for several reasons:
+
+**Separation of Concerns**: DTOs handle data transfer and validation, while Entities focus on persistence. This keeps the Entity clean and focused on database mapping.
+
+**Flexibility**: Different DTOs can have different validation rules for the same Entity. For example, `UserRequest` has password validation (8-30 chars, alphanumeric), but the Entity doesn't need these constraints since passwords are hashed.
+
+**Security**: Validation at the boundary (Controller) prevents invalid data from reaching the business logic. If validation was on the Entity, it might only trigger during persistence, allowing invalid data to flow through the service layer.
+
+**Performance**: Entity validation might occur during every database operation, while DTO validation happens only at API entry points.
+
+**Example from code**:
+- `UserRequest` (DTO) has `@NotBlank`, `@Size(min=8, max=30)`, `@Pattern` for password validation
+- `User` (Entity) has only `@NotNull` and `@Column` constraints for database schema
+
+### 2. Compare the prompts you used to generate the User entity versus the UserDTO. What keywords or phrases did you find were important to differentiate between a persistence object (Entity) and a data transfer object (DTO)?
+
+**Entity Generation Prompts**: Used terms like "JPA entity", "database table", "@Entity", "audit fields", "relationships". Keywords like "persistence", "database", "JPA" clearly indicated it was for data storage.
+
+**DTO Generation Prompts**: Used terms like "request DTO", "response DTO", "data transfer object", "validation annotations", "API input/output". Keywords like "DTO", "request", "response", "transfer" differentiated it from persistence objects.
+
+**Important Keywords/Phrases**:
+- **Entity**: "JPA entity", "database entity", "@Entity annotation", "audit timestamps", "unique constraints"
+- **DTO**: "DTO class", "request/response object", "validation annotations", "API model", "data transfer"
+
+These keywords help Copilot understand the context and generate appropriate code with the right annotations and structure.
+
 ## Architecture
 
 The application uses a layered architecture:
@@ -224,33 +254,3 @@ This User Management module serves as a foundation for:
 - Proper exception handling
 - Comprehensive test coverage (70%+)
 - Clean, readable code with meaningful names
-
-## Question to Answer
-
-### 1. When generating the UserDTO, Copilot added validation annotations like @Email and @Size. Why is it better to perform validation at the DTO level (in the Controller layer) rather than directly on the JPA Entity?
-
-Performing validation at the DTO level (Controller layer) is better than on the JPA Entity for several reasons:
-
-**Separation of Concerns**: DTOs handle data transfer and validation, while Entities focus on persistence. This keeps the Entity clean and focused on database mapping.
-
-**Flexibility**: Different DTOs can have different validation rules for the same Entity. For example, `UserRequest` has password validation (8-30 chars, alphanumeric), but the Entity doesn't need these constraints since passwords are hashed.
-
-**Security**: Validation at the boundary (Controller) prevents invalid data from reaching the business logic. If validation was on the Entity, it might only trigger during persistence, allowing invalid data to flow through the service layer.
-
-**Performance**: Entity validation might occur during every database operation, while DTO validation happens only at API entry points.
-
-**Example from code**:
-- `UserRequest` (DTO) has `@NotBlank`, `@Size(min=8, max=30)`, `@Pattern` for password validation
-- `User` (Entity) has only `@NotNull` and `@Column` constraints for database schema
-
-### 2. Compare the prompts you used to generate the User entity versus the UserDTO. What keywords or phrases did you find were important to differentiate between a persistence object (Entity) and a data transfer object (DTO)?
-
-**Entity Generation Prompts**: Used terms like "JPA entity", "database table", "@Entity", "audit fields", "relationships". Keywords like "persistence", "database", "JPA" clearly indicated it was for data storage.
-
-**DTO Generation Prompts**: Used terms like "request DTO", "response DTO", "data transfer object", "validation annotations", "API input/output". Keywords like "DTO", "request", "response", "transfer" differentiated it from persistence objects.
-
-**Important Keywords/Phrases**:
-- **Entity**: "JPA entity", "database entity", "@Entity annotation", "audit timestamps", "unique constraints"
-- **DTO**: "DTO class", "request/response object", "validation annotations", "API model", "data transfer"
-
-These keywords help Copilot understand the context and generate appropriate code with the right annotations and structure.
