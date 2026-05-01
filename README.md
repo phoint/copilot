@@ -6,38 +6,42 @@ This is a Spring Boot application implementing reusable User Management building
 
 ## Question to Answer
 
-### 1. How does modularization in Spring Boot improve code maintainability?
+### 1. When generating the UserDTO, Copilot added validation annotations like @Email and @Size. Why is it better to perform validation at the DTO level (in the Controller layer) rather than directly on the JPA Entity?
 
-Modularization in Spring Boot improves code maintainability by:
-- **Separation of Concerns**: Each module (e.g., User Management) encapsulates related functionality, making it easier to understand and manage.
-- **Reusability**: Modules can be reused across different parts of the application or even in other projects, reducing code duplication.
-- **Scalability**: As the application grows, new features can be added to specific modules without affecting others, allowing for easier scaling.
-- **Testing**: Modules can be tested independently, improving test coverage and reliability.
+Performing validation at the DTO level (Controller layer) is better than on the JPA Entity for several reasons:
 
-### 2. What are some limitations of code generation tools like GitHub Copilot?
+**Separation of Concerns**: DTOs handle data transfer and validation, while Entities focus on persistence. This keeps the Entity clean and focused on database mapping.
 
-While code generation tools like GitHub Copilot can speed up development, they have limitations:
-- **Context Awareness**: They may not fully understand the broader context of the application, leading to code that is syntactically correct but semantically inappropriate.
-- **Security Risks**: Generated code may include vulnerabilities if not reviewed carefully, such as hardcoded credentials or insecure practices.
-- **Quality Variability**: The quality of generated code can vary, and it may not always follow best practices or coding standards.
-- **Dependency on Training Data**: The generated code is based on patterns learned from existing code, which may not always be up-to-date or relevant to the specific use case.
-- **Lack of Creativity**: It may not be able to come up with innovative solutions or handle complex logic that requires human intuition and experience.
-### 3. What mechanisms can be employed to secure REST APIs in the user management system?
-To secure REST APIs in the user management system, the following mechanisms can be employed:
-- **Authentication**: Implementing authentication mechanisms such as JWT (JSON Web Tokens) or OAuth to verify the identity of users accessing the API.
-- **Authorization**: Using role-based access control (RBAC) to restrict access to certain endpoints based on user roles (e.g., ADMIN, USER).
-- **Input Validation**: Validating all incoming data to prevent injection attacks and ensure data integrity.
-- **HTTPS**: Enforcing HTTPS to encrypt data in transit and protect against man-in-the-middle attacks.
-- **Rate Limiting**: Implementing rate limiting to prevent abuse and protect against denial-of-service (DoS) attacks.
-- **CORS**: Configuring Cross-Origin Resource Sharing (CORS) to control which domains can access the API.
-- **Security Headers**: Adding security headers (e.g., Content-Security-Policy, X-Content-Type-Options) to protect against common web vulnerabilities.
+**Flexibility**: Different DTOs can have different validation rules for the same Entity. For example, `UserRequest` has password validation (8-30 chars, alphanumeric), but the Entity doesn't need these constraints since passwords are hashed.
+
+**Security**: Validation at the boundary (Controller) prevents invalid data from reaching the business logic. If validation was on the Entity, it might only trigger during persistence, allowing invalid data to flow through the service layer.
+
+**Performance**: Entity validation might occur during every database operation, while DTO validation happens only at API entry points.
+
+**Example from code**:
+- `UserRequest` (DTO) has `@NotBlank`, `@Size(min=8, max=30)`, `@Pattern` for password validation
+- `User` (Entity) has only `@NotNull` and `@Column` constraints for database schema
+
+### 2. Compare the prompts you used to generate the User entity versus the UserDTO. What keywords or phrases did you find were important to differentiate between a persistence object (Entity) and a data transfer object (DTO)?
+
+**Entity Generation Prompts**: Used terms like "JPA entity", "database table", "@Entity", "audit fields", "relationships". Keywords like "persistence", "database", "JPA" clearly indicated it was for data storage.
+
+**DTO Generation Prompts**: Used terms like "request DTO", "response DTO", "data transfer object", "validation annotations", "API input/output". Keywords like "DTO", "request", "response", "transfer" differentiated it from persistence objects.
+
+**Important Keywords/Phrases**:
+- **Entity**: "JPA entity", "database entity", "@Entity annotation", "audit timestamps", "unique constraints"
+- **DTO**: "DTO class", "request/response object", "validation annotations", "API model", "data transfer"
+
+These keywords help Copilot understand the context and generate appropriate code with the right annotations and structure.
 
 ## Architecture
 
-The application uses a multi-module architecture:
-- **core module**: Contains core entities, dtos, and exceptions
-- **service module**: Contains service interfaces and implementations
-- **api module**: Contains REST controllers and API-related configurations
+The application uses a layered architecture:
+
+- **Controller Layer**: REST endpoints with validation and error handling
+- **Service Layer**: Business logic with transactions and password hashing
+- **Repository Layer**: Data access using Spring Data JPA
+- **Entity Layer**: JPA entities with audit fields
 
 ## Components Implemented
 
@@ -213,9 +217,6 @@ Content-Type: application/json
 ```bash
 DELETE /api/v1/users/{id}
 ```
-
-## Postman Collection
-A Postman collection is included in the project for easy API testing. Import `SpringBoot_Copilot.postman_collection.json` into Postman to access all endpoints with example requests and responses.
 
 ## Validation Rules
 
