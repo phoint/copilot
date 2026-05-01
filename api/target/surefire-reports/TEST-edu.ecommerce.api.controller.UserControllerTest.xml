@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="edu.ecommerce.api.controller.UserControllerTest" time="20.963" tests="10" errors="0" skipped="0" failures="0" flakes="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\pc\learning-project\copilot\api\target\test-classes;C:\Users\pc\learning-project\copilot\api\target\classes;C:\Users\pc\learning-project\copilot\service\target\copilot-service-1.0-SNAPSHOT.jar;C:\Users\pc\learning-project\copilot\core\target\copilot-core-1.0-SNAPSHOT.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.5.13\spring-boot-starter-validation-3.5.13.jar;C:\Users\pc\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.3.Final\hibernate-validator-8.0.3.Final.jar;C:\Users\pc\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.5.13\spring-boot-starter-data-jpa-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.5.13\spring-boot-starter-jdbc-3.5.13.jar;C:\Users\pc\.m2\repository\com\zaxxer\HikariCP\6.3.3\HikariCP-6.3.3.jar;C:\Users\pc\.m2\repository\org\springframework\spring-jdbc\6.2.17\spring-jdbc-6.2.17.jar;C:\Users\pc\.m2\repository\org\hibernate\orm\hibernate-core\6.6.45.Final\hibernate-core-6.6.45.Final.jar;C:\Users\pc\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\pc\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\pc\.m2\repository\org\jboss\logging\jboss-logging\3.6.3.Final\jboss-logging-3.6.3.Final.jar;C:\Users\pc\.m2\repository\org\hibernate\common\hibernate-commons-annotations\7.0.3.Final\hibernate-commons-annotations-7.0.3.Final.jar;C:\Users\pc\.m2\repository\io\smallrye\jandex\3.2.0\jandex-3.2.0.jar;C:\Users\pc\.m2\repository\com\fasterxml\classmate\1.7.3\classmate-1.7.3.jar;C:\Users\pc\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.6\jaxb-runtime-4.0.6.jar;C:\Users\pc\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.6\jaxb-core-4.0.6.jar;C:\Users\pc\.m2\repository\org\eclipse\angus\angus-activation\2.0.3\angus-activation-2.0.3.jar;C:\Users\pc\.m2\repository\org\glassfish\jaxb\txw2\4.0.6\txw2-4.0.6.jar;C:\Users\pc\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\pc\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\pc\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\pc\.m2\repository\org\springframework\data\spring-data-jpa\3.5.10\spring-data-jpa-3.5.10.jar;C:\Users\pc\.m2\repository\org\springframework\data\spring-data-commons\3.5.10\spring-data-commons-3.5.10.jar;C:\Users\pc\.m2\repository\org\springframework\spring-orm\6.2.17\spring-orm-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-tx\6.2.17\spring-tx-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-aspects\6.2.17\spring-aspects-6.2.17.jar;C:\Users\pc\.m2\repository\org\aspectj\aspectjweaver\1.9.25.1\aspectjweaver-1.9.25.1.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.13\spring-boot-starter-web-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.13\spring-boot-starter-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.13\spring-boot-autoconfigure-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.13\spring-boot-starter-logging-3.5.13.jar;C:\Users\pc\.m2\repository\ch\qos\logback\logback-classic\1.5.32\logback-classic-1.5.32.jar;C:\Users\pc\.m2\repository\ch\qos\logback\logback-core\1.5.32\logback-core-1.5.32.jar;C:\Users\pc\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\pc\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\pc\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\pc\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\pc\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.13\spring-boot-starter-json-3.5.13.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.21.2\jackson-databind-2.21.2.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.21\jackson-annotations-2.21.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.21.2\jackson-core-2.21.2.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.21.2\jackson-datatype-jdk8-2.21.2.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.21.2\jackson-datatype-jsr310-2.21.2.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.21.2\jackson-module-parameter-names-2.21.2.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.13\spring-boot-starter-tomcat-3.5.13.jar;C:\Users\pc\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.53\tomcat-embed-core-10.1.53.jar;C:\Users\pc\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.53\tomcat-embed-el-10.1.53.jar;C:\Users\pc\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.53\tomcat-embed-websocket-10.1.53.jar;C:\Users\pc\.m2\repository\org\springframework\spring-web\6.2.17\spring-web-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-beans\6.2.17\spring-beans-6.2.17.jar;C:\Users\pc\.m2\repository\io\micrometer\micrometer-observation\1.15.10\micrometer-observation-1.15.10.jar;C:\Users\pc\.m2\repository\io\micrometer\micrometer-commons\1.15.10\micrometer-commons-1.15.10.jar;C:\Users\pc\.m2\repository\org\springframework\spring-webmvc\6.2.17\spring-webmvc-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-context\6.2.17\spring-context-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-expression\6.2.17\spring-expression-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.5.13\spring-boot-starter-security-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\spring-aop\6.2.17\spring-aop-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\security\spring-security-config\6.5.9\spring-security-config-6.5.9.jar;C:\Users\pc\.m2\repository\org\springframework\security\spring-security-core\6.5.9\spring-security-core-6.5.9.jar;C:\Users\pc\.m2\repository\org\springframework\security\spring-security-crypto\6.5.9\spring-security-crypto-6.5.9.jar;C:\Users\pc\.m2\repository\org\springframework\security\spring-security-web\6.5.9\spring-security-web-6.5.9.jar;C:\Users\pc\.m2\repository\com\h2database\h2\2.3.232\h2-2.3.232.jar;C:\Users\pc\.m2\repository\org\bgee\log4jdbc-log4j2\log4jdbc-log4j2-jdbc4.1\1.16\log4jdbc-log4j2-jdbc4.1-1.16.jar;C:\Users\pc\.m2\repository\org\projectlombok\lombok\1.18.34\lombok-1.18.34.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.5.13\spring-boot-starter-test-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-test\3.5.13\spring-boot-test-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.5.13\spring-boot-test-autoconfigure-3.5.13.jar;C:\Users\pc\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\pc\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\pc\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.4\jakarta.xml.bind-api-4.0.4.jar;C:\Users\pc\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.4\jakarta.activation-api-2.1.4.jar;C:\Users\pc\.m2\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;C:\Users\pc\.m2\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;C:\Users\pc\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\pc\.m2\repository\org\assertj\assertj-core\3.27.7\assertj-core-3.27.7.jar;C:\Users\pc\.m2\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar;C:\Users\pc\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\pc\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\pc\.m2\repository\org\junit\jupiter\junit-jupiter\5.12.2\junit-jupiter-5.12.2.jar;C:\Users\pc\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.12.2\junit-jupiter-api-5.12.2.jar;C:\Users\pc\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\pc\.m2\repository\org\junit\platform\junit-platform-commons\1.12.2\junit-platform-commons-1.12.2.jar;C:\Users\pc\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\pc\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.12.2\junit-jupiter-params-5.12.2.jar;C:\Users\pc\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.12.2\junit-jupiter-engine-5.12.2.jar;C:\Users\pc\.m2\repository\org\junit\platform\junit-platform-engine\1.12.2\junit-platform-engine-1.12.2.jar;C:\Users\pc\.m2\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar;C:\Users\pc\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar;C:\Users\pc\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\pc\.m2\repository\org\mockito\mockito-junit-jupiter\5.17.0\mockito-junit-jupiter-5.17.0.jar;C:\Users\pc\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\pc\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\pc\.m2\repository\org\springframework\spring-core\6.2.17\spring-core-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-jcl\6.2.17\spring-jcl-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-test\6.2.17\spring-test-6.2.17.jar;C:\Users\pc\.m2\repository\org\xmlunit\xmlunit-core\2.10.4\xmlunit-core-2.10.4.jar;C:\Users\pc\.m2\repository\io\rest-assured\rest-assured\5.4.0\rest-assured-5.4.0.jar;C:\Users\pc\.m2\repository\org\apache\groovy\groovy\4.0.30\groovy-4.0.30.jar;C:\Users\pc\.m2\repository\org\apache\groovy\groovy-xml\4.0.30\groovy-xml-4.0.30.jar;C:\Users\pc\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\pc\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\pc\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\pc\.m2\repository\commons-codec\commons-codec\1.18.0\commons-codec-1.18.0.jar;C:\Users\pc\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\pc\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\pc\.m2\repository\io\rest-assured\json-path\5.5.7\json-path-5.5.7.jar;C:\Users\pc\.m2\repository\org\apache\groovy\groovy-json\4.0.30\groovy-json-4.0.30.jar;C:\Users\pc\.m2\repository\io\rest-assured\rest-assured-common\5.5.7\rest-assured-common-5.5.7.jar;C:\Users\pc\.m2\repository\io\rest-assured\xml-path\5.5.7\xml-path-5.5.7.jar;C:\Users\pc\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;"/>
+    <property name="java.vm.vendor" value="OpenLogic"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="catalina.useNaming" value="false"/>
+    <property name="java.vendor.url" value="https://openlogic.com/"/>
+    <property name="user.timezone" value="Asia/Bangkok"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Users\pc\Documents\Java\openlogic-openjdk-17.0.14+7-windows-x64\openlogic-openjdk-17.0.14+7-windows-x64\bin"/>
+    <property name="sun.java.command" value="C:\Users\pc\AppData\Local\Temp\surefire8149618798340170345\surefirebooter-20260501123523985_9.jar C:\Users\pc\AppData\Local\Temp\surefire8149618798340170345 2026-05-01T12-35-10_679-jvmRun1 surefire-20260501123523985_7tmp surefire_2-20260501123523985_8tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\pc\learning-project\copilot\api\target\test-classes;C:\Users\pc\learning-project\copilot\api\target\classes;C:\Users\pc\learning-project\copilot\service\target\copilot-service-1.0-SNAPSHOT.jar;C:\Users\pc\learning-project\copilot\core\target\copilot-core-1.0-SNAPSHOT.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.5.13\spring-boot-starter-validation-3.5.13.jar;C:\Users\pc\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.3.Final\hibernate-validator-8.0.3.Final.jar;C:\Users\pc\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.5.13\spring-boot-starter-data-jpa-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.5.13\spring-boot-starter-jdbc-3.5.13.jar;C:\Users\pc\.m2\repository\com\zaxxer\HikariCP\6.3.3\HikariCP-6.3.3.jar;C:\Users\pc\.m2\repository\org\springframework\spring-jdbc\6.2.17\spring-jdbc-6.2.17.jar;C:\Users\pc\.m2\repository\org\hibernate\orm\hibernate-core\6.6.45.Final\hibernate-core-6.6.45.Final.jar;C:\Users\pc\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\pc\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\pc\.m2\repository\org\jboss\logging\jboss-logging\3.6.3.Final\jboss-logging-3.6.3.Final.jar;C:\Users\pc\.m2\repository\org\hibernate\common\hibernate-commons-annotations\7.0.3.Final\hibernate-commons-annotations-7.0.3.Final.jar;C:\Users\pc\.m2\repository\io\smallrye\jandex\3.2.0\jandex-3.2.0.jar;C:\Users\pc\.m2\repository\com\fasterxml\classmate\1.7.3\classmate-1.7.3.jar;C:\Users\pc\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.6\jaxb-runtime-4.0.6.jar;C:\Users\pc\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.6\jaxb-core-4.0.6.jar;C:\Users\pc\.m2\repository\org\eclipse\angus\angus-activation\2.0.3\angus-activation-2.0.3.jar;C:\Users\pc\.m2\repository\org\glassfish\jaxb\txw2\4.0.6\txw2-4.0.6.jar;C:\Users\pc\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\pc\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\pc\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\pc\.m2\repository\org\springframework\data\spring-data-jpa\3.5.10\spring-data-jpa-3.5.10.jar;C:\Users\pc\.m2\repository\org\springframework\data\spring-data-commons\3.5.10\spring-data-commons-3.5.10.jar;C:\Users\pc\.m2\repository\org\springframework\spring-orm\6.2.17\spring-orm-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-tx\6.2.17\spring-tx-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-aspects\6.2.17\spring-aspects-6.2.17.jar;C:\Users\pc\.m2\repository\org\aspectj\aspectjweaver\1.9.25.1\aspectjweaver-1.9.25.1.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.13\spring-boot-starter-web-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.13\spring-boot-starter-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot\3.5.13\spring-boot-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.13\spring-boot-autoconfigure-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.13\spring-boot-starter-logging-3.5.13.jar;C:\Users\pc\.m2\repository\ch\qos\logback\logback-classic\1.5.32\logback-classic-1.5.32.jar;C:\Users\pc\.m2\repository\ch\qos\logback\logback-core\1.5.32\logback-core-1.5.32.jar;C:\Users\pc\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\pc\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\pc\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\pc\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\pc\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.13\spring-boot-starter-json-3.5.13.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.21.2\jackson-databind-2.21.2.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.21\jackson-annotations-2.21.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.21.2\jackson-core-2.21.2.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.21.2\jackson-datatype-jdk8-2.21.2.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.21.2\jackson-datatype-jsr310-2.21.2.jar;C:\Users\pc\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.21.2\jackson-module-parameter-names-2.21.2.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.13\spring-boot-starter-tomcat-3.5.13.jar;C:\Users\pc\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.53\tomcat-embed-core-10.1.53.jar;C:\Users\pc\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.53\tomcat-embed-el-10.1.53.jar;C:\Users\pc\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.53\tomcat-embed-websocket-10.1.53.jar;C:\Users\pc\.m2\repository\org\springframework\spring-web\6.2.17\spring-web-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-beans\6.2.17\spring-beans-6.2.17.jar;C:\Users\pc\.m2\repository\io\micrometer\micrometer-observation\1.15.10\micrometer-observation-1.15.10.jar;C:\Users\pc\.m2\repository\io\micrometer\micrometer-commons\1.15.10\micrometer-commons-1.15.10.jar;C:\Users\pc\.m2\repository\org\springframework\spring-webmvc\6.2.17\spring-webmvc-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-context\6.2.17\spring-context-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-expression\6.2.17\spring-expression-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-security\3.5.13\spring-boot-starter-security-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\spring-aop\6.2.17\spring-aop-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\security\spring-security-config\6.5.9\spring-security-config-6.5.9.jar;C:\Users\pc\.m2\repository\org\springframework\security\spring-security-core\6.5.9\spring-security-core-6.5.9.jar;C:\Users\pc\.m2\repository\org\springframework\security\spring-security-crypto\6.5.9\spring-security-crypto-6.5.9.jar;C:\Users\pc\.m2\repository\org\springframework\security\spring-security-web\6.5.9\spring-security-web-6.5.9.jar;C:\Users\pc\.m2\repository\com\h2database\h2\2.3.232\h2-2.3.232.jar;C:\Users\pc\.m2\repository\org\bgee\log4jdbc-log4j2\log4jdbc-log4j2-jdbc4.1\1.16\log4jdbc-log4j2-jdbc4.1-1.16.jar;C:\Users\pc\.m2\repository\org\projectlombok\lombok\1.18.34\lombok-1.18.34.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.5.13\spring-boot-starter-test-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-test\3.5.13\spring-boot-test-3.5.13.jar;C:\Users\pc\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.5.13\spring-boot-test-autoconfigure-3.5.13.jar;C:\Users\pc\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\pc\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\pc\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.4\jakarta.xml.bind-api-4.0.4.jar;C:\Users\pc\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.4\jakarta.activation-api-2.1.4.jar;C:\Users\pc\.m2\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;C:\Users\pc\.m2\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;C:\Users\pc\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\pc\.m2\repository\org\assertj\assertj-core\3.27.7\assertj-core-3.27.7.jar;C:\Users\pc\.m2\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar;C:\Users\pc\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\pc\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\pc\.m2\repository\org\junit\jupiter\junit-jupiter\5.12.2\junit-jupiter-5.12.2.jar;C:\Users\pc\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.12.2\junit-jupiter-api-5.12.2.jar;C:\Users\pc\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\pc\.m2\repository\org\junit\platform\junit-platform-commons\1.12.2\junit-platform-commons-1.12.2.jar;C:\Users\pc\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\pc\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.12.2\junit-jupiter-params-5.12.2.jar;C:\Users\pc\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.12.2\junit-jupiter-engine-5.12.2.jar;C:\Users\pc\.m2\repository\org\junit\platform\junit-platform-engine\1.12.2\junit-platform-engine-1.12.2.jar;C:\Users\pc\.m2\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar;C:\Users\pc\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar;C:\Users\pc\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\pc\.m2\repository\org\mockito\mockito-junit-jupiter\5.17.0\mockito-junit-jupiter-5.17.0.jar;C:\Users\pc\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\pc\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\pc\.m2\repository\org\springframework\spring-core\6.2.17\spring-core-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-jcl\6.2.17\spring-jcl-6.2.17.jar;C:\Users\pc\.m2\repository\org\springframework\spring-test\6.2.17\spring-test-6.2.17.jar;C:\Users\pc\.m2\repository\org\xmlunit\xmlunit-core\2.10.4\xmlunit-core-2.10.4.jar;C:\Users\pc\.m2\repository\io\rest-assured\rest-assured\5.4.0\rest-assured-5.4.0.jar;C:\Users\pc\.m2\repository\org\apache\groovy\groovy\4.0.30\groovy-4.0.30.jar;C:\Users\pc\.m2\repository\org\apache\groovy\groovy-xml\4.0.30\groovy-xml-4.0.30.jar;C:\Users\pc\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\pc\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\pc\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\pc\.m2\repository\commons-codec\commons-codec\1.18.0\commons-codec-1.18.0.jar;C:\Users\pc\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\pc\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\pc\.m2\repository\io\rest-assured\json-path\5.5.7\json-path-5.5.7.jar;C:\Users\pc\.m2\repository\org\apache\groovy\groovy-json\4.0.30\groovy-json-4.0.30.jar;C:\Users\pc\.m2\repository\io\rest-assured\rest-assured-common\5.5.7\rest-assured-common-5.5.7.jar;C:\Users\pc\.m2\repository\io\rest-assured\xml-path\5.5.7\xml-path-5.5.7.jar;C:\Users\pc\.m2\repository\org\apache\commons\commons-lang3\3.17.0\commons-lang3-3.17.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\pc"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="C:\Users\pc\Documents\Java\openlogic-openjdk-17.0.14+7-windows-x64\openlogic-openjdk-17.0.14+7-windows-x64"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\pc\learning-project\copilot\api"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="windows-1252"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\pc\AppData\Local\Temp\surefire8149618798340170345\surefirebooter-20260501123523985_9.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.14+7-adhoc..jdk17u"/>
+    <property name="user.name" value="pc"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="OpenLogic-OpenJDK"/>
+    <property name="localRepository" value="C:\Users\pc\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://techsupport.roguewave.com/"/>
+    <property name="java.io.tmpdir" value="C:\Users\pc\AppData\Local\Temp\"/>
+    <property name="catalina.home" value="C:\Users\pc\AppData\Local\Temp\tomcat.0.10859486369538527037"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="17.0.14"/>
+    <property name="user.dir" value="C:\Users\pc\learning-project\copilot\api"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="14696"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="windows-1252"/>
+    <property name="catalina.base" value="C:\Users\pc\AppData\Local\Temp\tomcat.0.10859486369538527037"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\pc\Documents\Java\openlogic-openjdk-17.0.14+7-windows-x64\openlogic-openjdk-17.0.14+7-windows-x64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\pc\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\pc\bin;C:\Users\pc\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;C:\Users\pc\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Users\pc\AppData\Local\Programs\Microsoft VS Code;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Intel\WiFi\bin;C:\Program Files\Common Files\Intel\WirelessCommon;C:\Program Files\dotnet;C:\Program Files\Amazon\AWSCLIV2;C:\Program Files\Git\cmd;C:\Program Files\MongoDB\Server\8.0\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Users\PhoiNT\anaconda3;C:\Users\PhoiNT\anaconda3\Library\mingw-w64\bin;C:\Users\PhoiNT\anaconda3\Library\usr\bin;C:\Users\PhoiNT\anaconda3\Library\bin;C:\Users\PhoiNT\anaconda3\Scripts;C:\Users\pc\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.5\bin;C:\php-8.3.8-Win32-vs16-x64;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.5\bin;C:\Users\pc\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\pc\Documents\Java\openlogic-openjdk-17.0.14+7-windows-x64\openlogic-openjdk-17.0.14+7-windows-x64\bin;C:\Users\pc\Documents\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin;C:\Program Files\JetBrains\PyCharm 2025.1.1\bin;C:\Users\pc\.vscode\extensions\vscjava.vscode-java-debug-0.59.0\bundled\scripts\noConfigScripts;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="OpenLogic"/>
+    <property name="java.vm.version" value="17.0.14+7-adhoc..jdk17u"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="testGetUserById_NotFound" classname="edu.ecommerce.api.controller.UserControllerTest" time="4.66">
+    <system-out><![CDATA[12:35:25.718 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [edu.ecommerce.api.controller.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:35:25.995 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration edu.ecommerce.api.App for test class edu.ecommerce.api.controller.UserControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.13)
+
+2026-05-01T12:35:27.269+07:00  INFO 14696 --- [           main] e.e.api.controller.UserControllerTest    : Starting UserControllerTest using Java 17.0.14 with PID 14696 (started by pc in C:\Users\pc\learning-project\copilot\api)
+2026-05-01T12:35:27.271+07:00  INFO 14696 --- [           main] e.e.api.controller.UserControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2026-05-01T12:35:29.180+07:00  INFO 14696 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-01T12:35:29.307+07:00  INFO 14696 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2026-05-01T12:35:31.319+07:00  INFO 14696 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-05-01T12:35:31.352+07:00  INFO 14696 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-01T12:35:31.353+07:00  INFO 14696 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.53]
+2026-05-01T12:35:31.468+07:00  INFO 14696 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-01T12:35:31.469+07:00  INFO 14696 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3594 ms
+2026-05-01T12:35:31.892+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : null. DataSource.isWrapperFor(interface com.zaxxer.hikari.HikariConfigMXBean) returned 
+2026-05-01T12:35:31.894+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : null. DataSource.unwrap(interface com.zaxxer.hikari.HikariConfigMXBean) returned 
+2026-05-01T12:35:31.949+07:00  INFO 14696 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-01T12:35:32.094+07:00  INFO 14696 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.45.Final
+2026-05-01T12:35:32.194+07:00  INFO 14696 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-01T12:35:32.844+07:00  INFO 14696 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-01T12:35:32.909+07:00  INFO 14696 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-01T12:35:33.316+07:00  INFO 14696 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:test user=SA
+2026-05-01T12:35:33.318+07:00  INFO 14696 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-01T12:35:33.335+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 1. Connection opened. {executed in 427ms} 
+2026-05-01T12:35:33.336+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 1. Connection.new Connection returned 
+2026-05-01T12:35:33.336+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:33.341+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 1. Connection.getMetaData() returned HikariProxyDatabaseMetaData@1105063017 wrapping dbMeta1: conn0: url=jdbc:h2:mem:test user=SA
+2026-05-01T12:35:33.454+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 1. Connection closed. {executed in 6ms} 
+2026-05-01T12:35:33.454+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 1. Connection.close() returned 
+2026-05-01T12:35:33.469+07:00  INFO 14696 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'net.sf.log4jdbc.sql.jdbcapi.DataSourceSpy@6ba6557e']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-01T12:35:35.316+07:00  INFO 14696 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-01T12:35:35.347+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:35.348+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Connection.new Connection returned 
+2026-05-01T12:35:35.348+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:35.348+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Connection.getAutoCommit() returned true
+2026-05-01T12:35:35.375+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:35.376+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Connection.prepareStatement(select * from INFORMATION_SCHEMA.SEQUENCES) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@77f95e19
+2026-05-01T12:35:35.383+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. select * from INFORMATION_SCHEMA.SEQUENCES  {executed in 6 ms}
+2026-05-01T12:35:35.387+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. ResultSet.new ResultSet returned 
+2026-05-01T12:35:35.388+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@108d59b6
+2026-05-01T12:35:35.395+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 
+|-----------------|----------------|--------------|----------|------------------|------------------------|--------------|------------|--------------|--------------|----------|-------------|-------------------|---------------------------|-----------------------|-----------|------|--------|
+|sequence_catalog |sequence_schema |sequence_name |data_type |numeric_precision |numeric_precision_radix |numeric_scale |start_value |minimum_value |maximum_value |increment |cycle_option |declared_data_type |declared_numeric_precision |declared_numeric_scale |base_value |cache |remarks |
+|-----------------|----------------|--------------|----------|------------------|------------------------|--------------|------------|--------------|--------------|----------|-------------|-------------------|---------------------------|-----------------------|-----------|------|--------|
+|-----------------|----------------|--------------|----------|------------------|------------------------|--------------|------------|--------------|--------------|----------|-------------|-------------------|---------------------------|-----------------------|-----------|------|--------|
+
+2026-05-01T12:35:35.395+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. ResultSet.next() returned false
+2026-05-01T12:35:35.396+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. ResultSet.close() returned void
+2026-05-01T12:35:35.396+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. PreparedStatement.close() returned 
+2026-05-01T12:35:35.410+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Connection.getMetaData() returned HikariProxyDatabaseMetaData@1700499817 wrapping dbMeta4: conn0: url=jdbc:h2:mem:test user=SA
+2026-05-01T12:35:35.427+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.new Statement returned 
+2026-05-01T12:35:35.428+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Connection.createStatement() returned net.sf.log4jdbc.sql.jdbcapi.StatementSpy@62aefc75
+2026-05-01T12:35:35.443+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. create table users ( id bigint generated by default as identity, created_at timestamp(6) not 
+null, email varchar(100) not null, password varchar(255) not null, role varchar(20) not null, 
+status varchar(20) not null, updated_at timestamp(6) not null, username varchar(50) not null, 
+primary key (id) )  {executed in 14 ms}
+2026-05-01T12:35:35.444+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.execute(
+    create table users (
+        id bigint generated by default as identity,
+        created_at timestamp(6) not null,
+        email varchar(100) not null,
+        password varchar(255) not null,
+        role varchar(20) not null,
+        status varchar(20) not null,
+        updated_at timestamp(6) not null,
+        username varchar(50) not null,
+        primary key (id)
+    )) returned false
+2026-05-01T12:35:35.444+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.getWarnings() returned null
+2026-05-01T12:35:35.446+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. alter table if exists users drop constraint if exists UK6dotkott2kjsp8vw4d0m25fb7  {executed in 0 ms}
+2026-05-01T12:35:35.447+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.execute(
+    alter table if exists users 
+       drop constraint if exists UK6dotkott2kjsp8vw4d0m25fb7) returned false
+2026-05-01T12:35:35.447+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.getWarnings() returned null
+2026-05-01T12:35:35.449+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. alter table if exists users add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)  {executed in 2 ms}
+2026-05-01T12:35:35.450+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.execute(
+    alter table if exists users 
+       add constraint UK6dotkott2kjsp8vw4d0m25fb7 unique (email)) returned false
+2026-05-01T12:35:35.450+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.getWarnings() returned null
+2026-05-01T12:35:35.450+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. alter table if exists users drop constraint if exists UKr43af9ap4edm43mmtq01oddj6  {executed in 0 ms}
+2026-05-01T12:35:35.450+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.execute(
+    alter table if exists users 
+       drop constraint if exists UKr43af9ap4edm43mmtq01oddj6) returned false
+2026-05-01T12:35:35.450+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.getWarnings() returned null
+2026-05-01T12:35:35.452+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. alter table if exists users add constraint UKr43af9ap4edm43mmtq01oddj6 unique (username)  {executed in 1 ms}
+2026-05-01T12:35:35.452+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.execute(
+    alter table if exists users 
+       add constraint UKr43af9ap4edm43mmtq01oddj6 unique (username)) returned false
+2026-05-01T12:35:35.452+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.getWarnings() returned null
+2026-05-01T12:35:35.452+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Statement.close() returned 
+2026-05-01T12:35:35.452+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:35.452+07:00  INFO 14696 --- [           main] log4jdbc.log4j2                          : 2. Connection.close() returned 
+2026-05-01T12:35:35.454+07:00  INFO 14696 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-01T12:35:36.340+07:00  WARN 14696 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-01T12:35:36.904+07:00  WARN 14696 --- [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 8a915837-5a93-4811-a062-81f7eeaad33e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-01T12:35:36.925+07:00  INFO 14696 --- [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-01T12:35:38.630+07:00  INFO 14696 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 60427 (http) with context path '/'
+2026-05-01T12:35:38.647+07:00  INFO 14696 --- [           main] e.e.api.controller.UserControllerTest    : Started UserControllerTest in 12.203 seconds (process running for 14.512)
+2026-05-01T12:35:41.726+07:00  INFO 14696 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-01T12:35:41.726+07:00  INFO 14696 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-01T12:35:41.728+07:00  INFO 14696 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-01T12:35:41.848+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:41.848+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.new Connection returned 
+2026-05-01T12:35:41.849+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:41.852+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.setReadOnly(true) returned 
+2026-05-01T12:35:41.856+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.getAutoCommit() returned true
+2026-05-01T12:35:41.857+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:41.929+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:41.929+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.prepareStatement(select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.id=?, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@466277e3
+2026-05-01T12:35:41.930+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. PreparedStatement.setLong(1, 999) returned 
+2026-05-01T12:35:41.931+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username 
+from users u1_0 where u1_0.id=999  {executed in 1 ms}
+2026-05-01T12:35:41.931+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. ResultSet.new ResultSet returned 
+2026-05-01T12:35:41.931+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5436a63f
+2026-05-01T12:35:41.968+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 
+|---|-----------|------|---------|-----|-------|-----------|---------|
+|id |created_at |email |password |role |status |updated_at |username |
+|---|-----------|------|---------|-----|-------|-----------|---------|
+|---|-----------|------|---------|-----|-------|-----------|---------|
+
+2026-05-01T12:35:41.969+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. ResultSet.next() returned false
+2026-05-01T12:35:41.969+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:41.969+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. ResultSet.close() returned void
+2026-05-01T12:35:41.969+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:41.973+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:41.973+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. PreparedStatement.close() returned 
+2026-05-01T12:35:41.977+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.rollback() returned 
+2026-05-01T12:35:41.978+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:41.981+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.setReadOnly(false) returned 
+2026-05-01T12:35:42.070+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.isClosed() returned false
+2026-05-01T12:35:42.070+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.getWarnings() returned null
+2026-05-01T12:35:42.070+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.clearWarnings() returned 
+2026-05-01T12:35:42.071+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:42.071+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 3. Connection.close() returned 
+]]></system-out>
+  </testcase>
+  <testcase name="testDeleteUser_Success" classname="edu.ecommerce.api.controller.UserControllerTest" time="1.121">
+    <system-out><![CDATA[2026-05-01T12:35:43.657+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:43.657+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.new Connection returned 
+2026-05-01T12:35:43.657+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:43.657+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.getAutoCommit() returned true
+2026-05-01T12:35:43.657+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:44.000+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.001+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1ac5f2e1
+2026-05-01T12:35:44.002+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setString(1, "test_delete@example.com") returned 
+2026-05-01T12:35:44.002+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:44.003+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. select u1_0.id from users u1_0 where u1_0.email='test_delete@example.com' fetch first 1 rows 
+only  {executed in 1 ms}
+2026-05-01T12:35:44.003+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.004+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@424b0ff2
+2026-05-01T12:35:44.005+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:44.005+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.next() returned false
+2026-05-01T12:35:44.005+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:44.006+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.close() returned void
+2026-05-01T12:35:44.006+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.006+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.006+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.close() returned 
+2026-05-01T12:35:44.013+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.014+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.username=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@afe583c
+2026-05-01T12:35:44.014+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setString(1, "testuser_delete") returned 
+2026-05-01T12:35:44.014+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:44.015+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. select u1_0.id from users u1_0 where u1_0.username='testuser_delete' fetch first 1 rows only  {executed in 0 ms}
+2026-05-01T12:35:44.015+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.015+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1d2dc627
+2026-05-01T12:35:44.015+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:44.015+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.next() returned false
+2026-05-01T12:35:44.016+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:44.016+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.close() returned void
+2026-05-01T12:35:44.016+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.016+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.016+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.close() returned 
+2026-05-01T12:35:44.230+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.230+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.prepareStatement(insert into users (created_at,email,password,role,status,updated_at,username,id) values (?,?,?,?,?,?,?,default), 1) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@665d43d
+2026-05-01T12:35:44.238+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setTimestamp(1, 2026-05-01 12:35:44.204457) returned 
+2026-05-01T12:35:44.238+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setString(2, "test_delete@example.com") returned 
+2026-05-01T12:35:44.238+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setString(3, "$2a$10$/0JCM8A8KUqdPDGmWuzheeKxLbcmZ6s3wHb1yyfPZWeBbha5CrsGu") returned 
+2026-05-01T12:35:44.238+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setString(4, "USER") returned 
+2026-05-01T12:35:44.239+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setString(5, "ACTIVE") returned 
+2026-05-01T12:35:44.239+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setTimestamp(6, 2026-05-01 12:35:44.204457) returned 
+2026-05-01T12:35:44.239+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.setString(7, "testuser_delete") returned 
+2026-05-01T12:35:44.247+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. insert into users (created_at,email,password,role,status,updated_at,username,id) values ('05/01/2026 
+12:35:44.204','test_delete@example.com','$2a$10$/0JCM8A8KUqdPDGmWuzheeKxLbcmZ6s3wHb1yyfPZWeBbha5CrsGu','USER','ACTIVE','05/01/2026 
+12:35:44.204','testuser_delete',default)  {executed in 6 ms}
+2026-05-01T12:35:44.248+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:44.248+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. getGeneratedKeys on query: insert into users (created_at,email,password,role,status,updated_at,username,id) 
+values ('05/01/2026 12:35:44.204','test_delete@example.com','$2a$10$/0JCM8A8KUqdPDGmWuzheeKxLbcmZ6s3wHb1yyfPZWeBbha5CrsGu','USER','ACTIVE','05/01/2026 
+12:35:44.204','testuser_delete',default)  {executed in 0 ms}
+2026-05-01T12:35:44.249+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.249+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.getGeneratedKeys() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@3bb42ce1
+2026-05-01T12:35:44.251+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.getStatement() returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@665d43d
+2026-05-01T12:35:44.252+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.getMetaData() returned rsMeta8: columns=1
+2026-05-01T12:35:44.273+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.next() returned true
+2026-05-01T12:35:44.274+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.getLong(1) returned 1
+2026-05-01T12:35:44.274+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.276+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|1  |
+|---|
+
+2026-05-01T12:35:44.276+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.next() returned false
+2026-05-01T12:35:44.276+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.close() returned void
+2026-05-01T12:35:44.276+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. ResultSet.close() returned void
+2026-05-01T12:35:44.277+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.277+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.277+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. PreparedStatement.close() returned 
+2026-05-01T12:35:44.297+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.commit() returned 
+2026-05-01T12:35:44.298+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:44.307+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.isClosed() returned false
+2026-05-01T12:35:44.307+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.getWarnings() returned null
+2026-05-01T12:35:44.307+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.clearWarnings() returned 
+2026-05-01T12:35:44.307+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:44.307+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 4. Connection.close() returned 
+2026-05-01T12:35:44.376+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:44.376+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.new Connection returned 
+2026-05-01T12:35:44.376+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:44.376+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.getAutoCommit() returned true
+2026-05-01T12:35:44.377+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:44.377+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.378+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.prepareStatement(select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.id=?, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@276920b4
+2026-05-01T12:35:44.378+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.setLong(1, 1) returned 
+2026-05-01T12:35:44.378+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username 
+from users u1_0 where u1_0.id=1  {executed in 0 ms}
+2026-05-01T12:35:44.378+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.379+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@29aeda29
+2026-05-01T12:35:44.379+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.next() returned true
+2026-05-01T12:35:44.380+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.getTimestamp(2) returned 2026-05-01 12:35:44.204457
+2026-05-01T12:35:44.380+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.380+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.getString(3) returned test_delete@example.com
+2026-05-01T12:35:44.380+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.380+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.getString(4) returned $2a$10$/0JCM8A8KUqdPDGmWuzheeKxLbcmZ6s3wHb1yyfPZWeBbha5CrsGu
+2026-05-01T12:35:44.380+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.380+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.getString(5) returned USER
+2026-05-01T12:35:44.380+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.381+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.getString(6) returned ACTIVE
+2026-05-01T12:35:44.381+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.381+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.getTimestamp(7) returned 2026-05-01 12:35:44.204457
+2026-05-01T12:35:44.381+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.381+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.getString(8) returned testuser_delete
+2026-05-01T12:35:44.381+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.384+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 
+|---------|---------------------------|------------------------|-------------------------------------------------------------|-----|-------|---------------------------|----------------|
+|id       |created_at                 |email                   |password                                                     |role |status |updated_at                 |username        |
+|---------|---------------------------|------------------------|-------------------------------------------------------------|-----|-------|---------------------------|----------------|
+|[unread] |2026-05-01 12:35:44.204457 |test_delete@example.com |$2a$10$/0JCM8A8KUqdPDGmWuzheeKxLbcmZ6s3wHb1yyfPZWeBbha5CrsGu |USER |ACTIVE |2026-05-01 12:35:44.204457 |testuser_delete |
+|---------|---------------------------|------------------------|-------------------------------------------------------------|-----|-------|---------------------------|----------------|
+
+2026-05-01T12:35:44.385+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.next() returned false
+2026-05-01T12:35:44.386+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:44.386+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. ResultSet.close() returned void
+2026-05-01T12:35:44.386+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.387+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.387+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.close() returned 
+2026-05-01T12:35:44.404+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.404+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.prepareStatement(delete from users where id=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5cf2a0cf
+2026-05-01T12:35:44.405+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.setLong(1, 1) returned 
+2026-05-01T12:35:44.406+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. delete from users where id=1  {executed in 1 ms}
+2026-05-01T12:35:44.406+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:44.406+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.406+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.406+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. PreparedStatement.close() returned 
+2026-05-01T12:35:44.409+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.commit() returned 
+2026-05-01T12:35:44.409+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:44.411+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.isClosed() returned false
+2026-05-01T12:35:44.412+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.getWarnings() returned null
+2026-05-01T12:35:44.412+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.clearWarnings() returned 
+2026-05-01T12:35:44.412+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:44.412+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 5. Connection.close() returned 
+2026-05-01T12:35:44.438+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:44.439+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.new Connection returned 
+2026-05-01T12:35:44.439+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:44.439+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.setReadOnly(true) returned 
+2026-05-01T12:35:44.439+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.getAutoCommit() returned true
+2026-05-01T12:35:44.439+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:44.440+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.440+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.prepareStatement(select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.id=?, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@77a0f2a4
+2026-05-01T12:35:44.440+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. PreparedStatement.setLong(1, 1) returned 
+2026-05-01T12:35:44.440+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username 
+from users u1_0 where u1_0.id=1  {executed in 0 ms}
+2026-05-01T12:35:44.440+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.440+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@79670220
+2026-05-01T12:35:44.441+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 
+|---|-----------|------|---------|-----|-------|-----------|---------|
+|id |created_at |email |password |role |status |updated_at |username |
+|---|-----------|------|---------|-----|-------|-----------|---------|
+|---|-----------|------|---------|-----|-------|-----------|---------|
+
+2026-05-01T12:35:44.441+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. ResultSet.next() returned false
+2026-05-01T12:35:44.441+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:44.441+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. ResultSet.close() returned void
+2026-05-01T12:35:44.442+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.442+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.442+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. PreparedStatement.close() returned 
+2026-05-01T12:35:44.442+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.rollback() returned 
+2026-05-01T12:35:44.442+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:44.443+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.setReadOnly(false) returned 
+2026-05-01T12:35:44.445+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.isClosed() returned false
+2026-05-01T12:35:44.445+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.getWarnings() returned null
+2026-05-01T12:35:44.445+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.clearWarnings() returned 
+2026-05-01T12:35:44.445+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:44.445+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 6. Connection.close() returned 
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateUser_Success" classname="edu.ecommerce.api.controller.UserControllerTest" time="0.485">
+    <system-out><![CDATA[2026-05-01T12:35:44.496+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:44.497+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.new Connection returned 
+2026-05-01T12:35:44.497+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:44.497+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.getAutoCommit() returned true
+2026-05-01T12:35:44.497+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:44.499+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.500+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1bbea044
+2026-05-01T12:35:44.500+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setString(1, "test_update@example.com") returned 
+2026-05-01T12:35:44.500+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:44.500+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. select u1_0.id from users u1_0 where u1_0.email='test_update@example.com' fetch first 1 rows 
+only  {executed in 0 ms}
+2026-05-01T12:35:44.500+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.500+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@6980832f
+2026-05-01T12:35:44.501+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:44.501+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.next() returned false
+2026-05-01T12:35:44.501+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:44.501+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.close() returned void
+2026-05-01T12:35:44.501+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.501+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.501+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.close() returned 
+2026-05-01T12:35:44.504+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.504+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.username=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@513bafcf
+2026-05-01T12:35:44.504+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setString(1, "testuser_update") returned 
+2026-05-01T12:35:44.504+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:44.505+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. select u1_0.id from users u1_0 where u1_0.username='testuser_update' fetch first 1 rows only  {executed in 0 ms}
+2026-05-01T12:35:44.505+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.505+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@2b43d69
+2026-05-01T12:35:44.505+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:44.506+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.next() returned false
+2026-05-01T12:35:44.506+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:44.506+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.close() returned void
+2026-05-01T12:35:44.506+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.507+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.507+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.close() returned 
+2026-05-01T12:35:44.621+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.621+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.prepareStatement(insert into users (created_at,email,password,role,status,updated_at,username,id) values (?,?,?,?,?,?,?,default), 1) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@273015df
+2026-05-01T12:35:44.621+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setTimestamp(1, 2026-05-01 12:35:44.620284) returned 
+2026-05-01T12:35:44.621+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setString(2, "test_update@example.com") returned 
+2026-05-01T12:35:44.622+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setString(3, "$2a$10$W8sPLrgG0G2LflkJSxcaSuVRlz41vkop8rMJiCOrhubRipHxfFBCa") returned 
+2026-05-01T12:35:44.622+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setString(4, "USER") returned 
+2026-05-01T12:35:44.622+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setString(5, "ACTIVE") returned 
+2026-05-01T12:35:44.622+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setTimestamp(6, 2026-05-01 12:35:44.620284) returned 
+2026-05-01T12:35:44.622+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.setString(7, "testuser_update") returned 
+2026-05-01T12:35:44.623+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. insert into users (created_at,email,password,role,status,updated_at,username,id) values ('05/01/2026 
+12:35:44.620','test_update@example.com','$2a$10$W8sPLrgG0G2LflkJSxcaSuVRlz41vkop8rMJiCOrhubRipHxfFBCa','USER','ACTIVE','05/01/2026 
+12:35:44.620','testuser_update',default)  {executed in 1 ms}
+2026-05-01T12:35:44.623+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:44.623+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. getGeneratedKeys on query: insert into users (created_at,email,password,role,status,updated_at,username,id) 
+values ('05/01/2026 12:35:44.620','test_update@example.com','$2a$10$W8sPLrgG0G2LflkJSxcaSuVRlz41vkop8rMJiCOrhubRipHxfFBCa','USER','ACTIVE','05/01/2026 
+12:35:44.620','testuser_update',default)  {executed in 0 ms}
+2026-05-01T12:35:44.623+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.623+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.getGeneratedKeys() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@13964aef
+2026-05-01T12:35:44.623+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.getStatement() returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@273015df
+2026-05-01T12:35:44.624+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.getMetaData() returned rsMeta18: columns=1
+2026-05-01T12:35:44.624+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.next() returned true
+2026-05-01T12:35:44.624+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.getLong(1) returned 2
+2026-05-01T12:35:44.625+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.625+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|2  |
+|---|
+
+2026-05-01T12:35:44.625+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.next() returned false
+2026-05-01T12:35:44.625+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.close() returned void
+2026-05-01T12:35:44.625+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. ResultSet.close() returned void
+2026-05-01T12:35:44.625+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.626+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.626+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. PreparedStatement.close() returned 
+2026-05-01T12:35:44.626+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.commit() returned 
+2026-05-01T12:35:44.626+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:44.629+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.isClosed() returned false
+2026-05-01T12:35:44.630+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.getWarnings() returned null
+2026-05-01T12:35:44.630+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.clearWarnings() returned 
+2026-05-01T12:35:44.630+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:44.630+07:00  INFO 14696 --- [o-auto-1-exec-5] log4jdbc.log4j2                          : 7. Connection.close() returned 
+2026-05-01T12:35:44.697+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:44.698+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.new Connection returned 
+2026-05-01T12:35:44.698+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:44.698+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.getAutoCommit() returned true
+2026-05-01T12:35:44.698+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:44.700+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.700+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.prepareStatement(select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.id=?, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3a40d961
+2026-05-01T12:35:44.700+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setLong(1, 2) returned 
+2026-05-01T12:35:44.700+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username 
+from users u1_0 where u1_0.id=2  {executed in 0 ms}
+2026-05-01T12:35:44.701+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.701+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1e42236f
+2026-05-01T12:35:44.701+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.next() returned true
+2026-05-01T12:35:44.701+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.getTimestamp(2) returned 2026-05-01 12:35:44.620284
+2026-05-01T12:35:44.702+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.702+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.getString(3) returned test_update@example.com
+2026-05-01T12:35:44.702+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.702+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.getString(4) returned $2a$10$W8sPLrgG0G2LflkJSxcaSuVRlz41vkop8rMJiCOrhubRipHxfFBCa
+2026-05-01T12:35:44.702+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.703+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.getString(5) returned USER
+2026-05-01T12:35:44.703+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.703+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.getString(6) returned ACTIVE
+2026-05-01T12:35:44.703+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.703+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.getTimestamp(7) returned 2026-05-01 12:35:44.620284
+2026-05-01T12:35:44.703+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.704+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.getString(8) returned testuser_update
+2026-05-01T12:35:44.704+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.wasNull() returned false
+2026-05-01T12:35:44.705+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 
+|---------|---------------------------|------------------------|-------------------------------------------------------------|-----|-------|---------------------------|----------------|
+|id       |created_at                 |email                   |password                                                     |role |status |updated_at                 |username        |
+|---------|---------------------------|------------------------|-------------------------------------------------------------|-----|-------|---------------------------|----------------|
+|[unread] |2026-05-01 12:35:44.620284 |test_update@example.com |$2a$10$W8sPLrgG0G2LflkJSxcaSuVRlz41vkop8rMJiCOrhubRipHxfFBCa |USER |ACTIVE |2026-05-01 12:35:44.620284 |testuser_update |
+|---------|---------------------------|------------------------|-------------------------------------------------------------|-----|-------|---------------------------|----------------|
+
+2026-05-01T12:35:44.706+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.next() returned false
+2026-05-01T12:35:44.706+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:44.706+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.close() returned void
+2026-05-01T12:35:44.707+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.707+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.707+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.close() returned 
+2026-05-01T12:35:44.713+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.713+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.username=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@42fed7e4
+2026-05-01T12:35:44.713+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(1, "updateduser_update") returned 
+2026-05-01T12:35:44.713+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:44.714+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. select u1_0.id from users u1_0 where u1_0.username='updateduser_update' fetch first 1 rows 
+only  {executed in 1 ms}
+2026-05-01T12:35:44.714+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.714+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@22c1b57
+2026-05-01T12:35:44.715+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:44.715+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.next() returned false
+2026-05-01T12:35:44.715+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:44.715+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.close() returned void
+2026-05-01T12:35:44.715+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.715+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.715+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.close() returned 
+2026-05-01T12:35:44.735+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.736+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.prepareStatement(update users set email=?,password=?,role=?,status=?,updated_at=?,username=? where id=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@423ac014
+2026-05-01T12:35:44.736+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(1, "test_update@example.com") returned 
+2026-05-01T12:35:44.736+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(2, "$2a$10$W8sPLrgG0G2LflkJSxcaSuVRlz41vkop8rMJiCOrhubRipHxfFBCa") returned 
+2026-05-01T12:35:44.736+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(3, "USER") returned 
+2026-05-01T12:35:44.736+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(4, "ACTIVE") returned 
+2026-05-01T12:35:44.737+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setTimestamp(5, 2026-05-01 12:35:44.723719) returned 
+2026-05-01T12:35:44.737+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(6, "updateduser_update") returned 
+2026-05-01T12:35:44.737+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setLong(7, 2) returned 
+2026-05-01T12:35:44.738+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. update users set email='test_update@example.com',password='$2a$10$W8sPLrgG0G2LflkJSxcaSuVRlz41vkop8rMJiCOrhubRipHxfFBCa',role='USER',status='ACTIVE',updated_at='05/01/2026 
+12:35:44.723',username='updateduser_update' where id=2  {executed in 1 ms}
+2026-05-01T12:35:44.739+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:44.739+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.739+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.739+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.close() returned 
+2026-05-01T12:35:44.746+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.746+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@4265a0cb
+2026-05-01T12:35:44.746+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(1, "updated_update@example.com") returned 
+2026-05-01T12:35:44.746+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:44.747+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. select u1_0.id from users u1_0 where u1_0.email='updated_update@example.com' fetch first 1 
+rows only  {executed in 0 ms}
+2026-05-01T12:35:44.747+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.new ResultSet returned 
+2026-05-01T12:35:44.747+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@752ae4fd
+2026-05-01T12:35:44.747+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:44.748+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.next() returned false
+2026-05-01T12:35:44.748+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:44.748+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. ResultSet.close() returned void
+2026-05-01T12:35:44.748+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.748+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.748+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.close() returned 
+2026-05-01T12:35:44.894+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:44.895+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.prepareStatement(update users set email=?,password=?,role=?,status=?,updated_at=?,username=? where id=?) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@70645e99
+2026-05-01T12:35:44.895+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(1, "updated_update@example.com") returned 
+2026-05-01T12:35:44.895+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(2, "$2a$10$sYjrRddz2ApU10si2JTXo.Rz0k1Z.yK./6t8wf8PZa.y/5C5kYRTu") returned 
+2026-05-01T12:35:44.895+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(3, "USER") returned 
+2026-05-01T12:35:44.895+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(4, "ACTIVE") returned 
+2026-05-01T12:35:44.895+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setTimestamp(5, 2026-05-01 12:35:44.894884) returned 
+2026-05-01T12:35:44.895+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setString(6, "updateduser_update") returned 
+2026-05-01T12:35:44.895+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.setLong(7, 2) returned 
+2026-05-01T12:35:44.896+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. update users set email='updated_update@example.com',password='$2a$10$sYjrRddz2ApU10si2JTXo.Rz0k1Z.yK./6t8wf8PZa.y/5C5kYRTu',role='USER',status='ACTIVE',updated_at='05/01/2026 
+12:35:44.894',username='updateduser_update' where id=2  {executed in 1 ms}
+2026-05-01T12:35:44.896+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:44.896+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:44.896+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:44.896+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. PreparedStatement.close() returned 
+2026-05-01T12:35:44.897+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.commit() returned 
+2026-05-01T12:35:44.897+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:44.898+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.isClosed() returned false
+2026-05-01T12:35:44.899+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.getWarnings() returned null
+2026-05-01T12:35:44.899+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.clearWarnings() returned 
+2026-05-01T12:35:44.899+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:44.899+07:00  INFO 14696 --- [o-auto-1-exec-6] log4jdbc.log4j2                          : 8. Connection.close() returned 
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateUser_InvalidEmail" classname="edu.ecommerce.api.controller.UserControllerTest" time="0.061"/>
+  <testcase name="testCreateUser_MissingUsername" classname="edu.ecommerce.api.controller.UserControllerTest" time="0.056"/>
+  <testcase name="testGetUserByEmail_Success" classname="edu.ecommerce.api.controller.UserControllerTest" time="0.236">
+    <system-out><![CDATA[2026-05-01T12:35:45.079+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:45.079+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.new Connection returned 
+2026-05-01T12:35:45.079+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:45.079+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.getAutoCommit() returned true
+2026-05-01T12:35:45.079+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:45.080+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.080+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@72a3d382
+2026-05-01T12:35:45.080+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setString(1, "test_email@example.com") returned 
+2026-05-01T12:35:45.080+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:45.081+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. select u1_0.id from users u1_0 where u1_0.email='test_email@example.com' fetch first 1 rows 
+only  {executed in 0 ms}
+2026-05-01T12:35:45.081+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.081+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@76ddbe54
+2026-05-01T12:35:45.081+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:45.081+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.next() returned false
+2026-05-01T12:35:45.081+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.081+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.close() returned void
+2026-05-01T12:35:45.081+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.083+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.083+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.close() returned 
+2026-05-01T12:35:45.085+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.085+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.username=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@48cd3975
+2026-05-01T12:35:45.085+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setString(1, "testuser_email") returned 
+2026-05-01T12:35:45.085+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:45.085+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. select u1_0.id from users u1_0 where u1_0.username='testuser_email' fetch first 1 rows only  {executed in 0 ms}
+2026-05-01T12:35:45.085+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.085+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@2bb175
+2026-05-01T12:35:45.086+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:45.086+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.next() returned false
+2026-05-01T12:35:45.086+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.086+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.close() returned void
+2026-05-01T12:35:45.086+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.086+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.086+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.close() returned 
+2026-05-01T12:35:45.196+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.197+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.prepareStatement(insert into users (created_at,email,password,role,status,updated_at,username,id) values (?,?,?,?,?,?,?,default), 1) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1c5d6711
+2026-05-01T12:35:45.197+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setTimestamp(1, 2026-05-01 12:35:45.195873) returned 
+2026-05-01T12:35:45.198+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setString(2, "test_email@example.com") returned 
+2026-05-01T12:35:45.198+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setString(3, "$2a$10$.3Km/bDcghjMbIBa1R3f3uQwQy9owLe9by3bkrCZEZnd/ekkXTTqm") returned 
+2026-05-01T12:35:45.198+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setString(4, "USER") returned 
+2026-05-01T12:35:45.198+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setString(5, "ACTIVE") returned 
+2026-05-01T12:35:45.198+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setTimestamp(6, 2026-05-01 12:35:45.195873) returned 
+2026-05-01T12:35:45.198+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.setString(7, "testuser_email") returned 
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. insert into users (created_at,email,password,role,status,updated_at,username,id) values ('05/01/2026 
+12:35:45.195','test_email@example.com','$2a$10$.3Km/bDcghjMbIBa1R3f3uQwQy9owLe9by3bkrCZEZnd/ekkXTTqm','USER','ACTIVE','05/01/2026 
+12:35:45.195','testuser_email',default)  {executed in 1 ms}
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. getGeneratedKeys on query: insert into users (created_at,email,password,role,status,updated_at,username,id) 
+values ('05/01/2026 12:35:45.195','test_email@example.com','$2a$10$.3Km/bDcghjMbIBa1R3f3uQwQy9owLe9by3bkrCZEZnd/ekkXTTqm','USER','ACTIVE','05/01/2026 
+12:35:45.195','testuser_email',default)  {executed in 0 ms}
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.getGeneratedKeys() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@68e8583d
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.getStatement() returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1c5d6711
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.getMetaData() returned rsMeta30: columns=1
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.next() returned true
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.getLong(1) returned 3
+2026-05-01T12:35:45.199+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.200+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|3  |
+|---|
+
+2026-05-01T12:35:45.200+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.next() returned false
+2026-05-01T12:35:45.200+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.close() returned void
+2026-05-01T12:35:45.200+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. ResultSet.close() returned void
+2026-05-01T12:35:45.200+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.200+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.200+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. PreparedStatement.close() returned 
+2026-05-01T12:35:45.200+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.commit() returned 
+2026-05-01T12:35:45.200+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:45.202+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.isClosed() returned false
+2026-05-01T12:35:45.202+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.getWarnings() returned null
+2026-05-01T12:35:45.202+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.clearWarnings() returned 
+2026-05-01T12:35:45.202+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:45.202+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 9. Connection.close() returned 
+2026-05-01T12:35:45.224+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection opened. {executed in 1ms} 
+2026-05-01T12:35:45.224+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.new Connection returned 
+2026-05-01T12:35:45.224+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:45.224+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.setReadOnly(true) returned 
+2026-05-01T12:35:45.224+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.getAutoCommit() returned true
+2026-05-01T12:35:45.224+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:45.235+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.236+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.prepareStatement(select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.email=?, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@57c6c79a
+2026-05-01T12:35:45.236+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. PreparedStatement.setString(1, "test_email@example.com") returned 
+2026-05-01T12:35:45.236+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username 
+from users u1_0 where u1_0.email='test_email@example.com'  {executed in 0 ms}
+2026-05-01T12:35:45.236+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.236+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@12538259
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.next() returned true
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.getLong(1) returned 3
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.getTimestamp(2) returned 2026-05-01 12:35:45.195873
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.getString(3) returned test_email@example.com
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.getString(4) returned $2a$10$.3Km/bDcghjMbIBa1R3f3uQwQy9owLe9by3bkrCZEZnd/ekkXTTqm
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.getString(5) returned USER
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.getString(6) returned ACTIVE
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.237+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.getTimestamp(7) returned 2026-05-01 12:35:45.195873
+2026-05-01T12:35:45.238+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.238+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.getString(8) returned testuser_email
+2026-05-01T12:35:45.238+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.238+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 
+|---|---------------------------|-----------------------|-------------------------------------------------------------|-----|-------|---------------------------|---------------|
+|id |created_at                 |email                  |password                                                     |role |status |updated_at                 |username       |
+|---|---------------------------|-----------------------|-------------------------------------------------------------|-----|-------|---------------------------|---------------|
+|3  |2026-05-01 12:35:45.195873 |test_email@example.com |$2a$10$.3Km/bDcghjMbIBa1R3f3uQwQy9owLe9by3bkrCZEZnd/ekkXTTqm |USER |ACTIVE |2026-05-01 12:35:45.195873 |testuser_email |
+|---|---------------------------|-----------------------|-------------------------------------------------------------|-----|-------|---------------------------|---------------|
+
+2026-05-01T12:35:45.239+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.next() returned false
+2026-05-01T12:35:45.239+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.239+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. ResultSet.close() returned void
+2026-05-01T12:35:45.239+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.239+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.239+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. PreparedStatement.close() returned 
+2026-05-01T12:35:45.240+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.commit() returned 
+2026-05-01T12:35:45.241+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:45.241+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.setReadOnly(false) returned 
+2026-05-01T12:35:45.250+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.isClosed() returned false
+2026-05-01T12:35:45.250+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.getWarnings() returned null
+2026-05-01T12:35:45.250+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.clearWarnings() returned 
+2026-05-01T12:35:45.250+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:45.250+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 10. Connection.close() returned 
+]]></system-out>
+  </testcase>
+  <testcase name="testListAllUsers_Success" classname="edu.ecommerce.api.controller.UserControllerTest" time="0.29">
+    <system-out><![CDATA[2026-05-01T12:35:45.323+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:45.324+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.new Connection returned 
+2026-05-01T12:35:45.324+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:45.324+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.getAutoCommit() returned true
+2026-05-01T12:35:45.324+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:45.327+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.327+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@771fd6e5
+2026-05-01T12:35:45.327+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setString(1, "test_list1@example.com") returned 
+2026-05-01T12:35:45.327+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:45.327+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. select u1_0.id from users u1_0 where u1_0.email='test_list1@example.com' fetch first 1 rows 
+only  {executed in 0 ms}
+2026-05-01T12:35:45.328+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.328+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@1f421446
+2026-05-01T12:35:45.328+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:45.328+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.next() returned false
+2026-05-01T12:35:45.329+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.329+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.close() returned void
+2026-05-01T12:35:45.329+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.334+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.334+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.close() returned 
+2026-05-01T12:35:45.336+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.337+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.username=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@16ec42a4
+2026-05-01T12:35:45.337+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setString(1, "testuser_list1") returned 
+2026-05-01T12:35:45.337+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:45.337+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. select u1_0.id from users u1_0 where u1_0.username='testuser_list1' fetch first 1 rows only  {executed in 0 ms}
+2026-05-01T12:35:45.337+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.337+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@148f9217
+2026-05-01T12:35:45.337+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:45.337+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.next() returned false
+2026-05-01T12:35:45.337+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.338+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.close() returned void
+2026-05-01T12:35:45.338+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.338+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.338+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.close() returned 
+2026-05-01T12:35:45.444+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.445+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.prepareStatement(insert into users (created_at,email,password,role,status,updated_at,username,id) values (?,?,?,?,?,?,?,default), 1) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@38cf1b82
+2026-05-01T12:35:45.445+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setTimestamp(1, 2026-05-01 12:35:45.444562) returned 
+2026-05-01T12:35:45.446+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setString(2, "test_list1@example.com") returned 
+2026-05-01T12:35:45.446+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setString(3, "$2a$10$ZkNmQmgbOPjGQaM2L50iAu1jsyU9GX9vWkMjkK00ZHZF9xIBghMd2") returned 
+2026-05-01T12:35:45.446+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setString(4, "USER") returned 
+2026-05-01T12:35:45.446+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setString(5, "ACTIVE") returned 
+2026-05-01T12:35:45.446+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setTimestamp(6, 2026-05-01 12:35:45.444562) returned 
+2026-05-01T12:35:45.447+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.setString(7, "testuser_list1") returned 
+2026-05-01T12:35:45.447+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. insert into users (created_at,email,password,role,status,updated_at,username,id) values ('05/01/2026 
+12:35:45.444','test_list1@example.com','$2a$10$ZkNmQmgbOPjGQaM2L50iAu1jsyU9GX9vWkMjkK00ZHZF9xIBghMd2','USER','ACTIVE','05/01/2026 
+12:35:45.444','testuser_list1',default)  {executed in 0 ms}
+2026-05-01T12:35:45.447+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:45.448+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. getGeneratedKeys on query: insert into users (created_at,email,password,role,status,updated_at,username,id) 
+values ('05/01/2026 12:35:45.444','test_list1@example.com','$2a$10$ZkNmQmgbOPjGQaM2L50iAu1jsyU9GX9vWkMjkK00ZHZF9xIBghMd2','USER','ACTIVE','05/01/2026 
+12:35:45.444','testuser_list1',default)  {executed in 0 ms}
+2026-05-01T12:35:45.448+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.448+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.getGeneratedKeys() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@4035d94c
+2026-05-01T12:35:45.448+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.getStatement() returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@38cf1b82
+2026-05-01T12:35:45.448+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.getMetaData() returned rsMeta38: columns=1
+2026-05-01T12:35:45.448+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.next() returned true
+2026-05-01T12:35:45.448+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.getLong(1) returned 4
+2026-05-01T12:35:45.449+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.449+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|4  |
+|---|
+
+2026-05-01T12:35:45.449+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.next() returned false
+2026-05-01T12:35:45.449+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.close() returned void
+2026-05-01T12:35:45.449+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. ResultSet.close() returned void
+2026-05-01T12:35:45.449+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.449+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.449+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. PreparedStatement.close() returned 
+2026-05-01T12:35:45.450+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.commit() returned 
+2026-05-01T12:35:45.450+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:45.452+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.isClosed() returned false
+2026-05-01T12:35:45.452+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.getWarnings() returned null
+2026-05-01T12:35:45.452+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.clearWarnings() returned 
+2026-05-01T12:35:45.452+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:45.452+07:00  INFO 14696 --- [o-auto-1-exec-1] log4jdbc.log4j2                          : 11. Connection.close() returned 
+2026-05-01T12:35:45.469+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:45.470+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.new Connection returned 
+2026-05-01T12:35:45.470+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:45.470+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.setReadOnly(true) returned 
+2026-05-01T12:35:45.470+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.getAutoCommit() returned true
+2026-05-01T12:35:45.470+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:45.477+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.477+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.prepareStatement(select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username from users u1_0 offset ? rows fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@90f99fc
+2026-05-01T12:35:45.477+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. PreparedStatement.setInt(1, 0) returned 
+2026-05-01T12:35:45.477+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. PreparedStatement.setInt(2, 20) returned 
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username 
+from users u1_0 offset 0 rows fetch first 20 rows only  {executed in 1 ms}
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@67888c64
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.next() returned true
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getLong(1) returned 2
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getTimestamp(2) returned 2026-05-01 12:35:44.620284
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(3) returned updated_update@example.com
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(4) returned $2a$10$sYjrRddz2ApU10si2JTXo.Rz0k1Z.yK./6t8wf8PZa.y/5C5kYRTu
+2026-05-01T12:35:45.478+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(5) returned USER
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(6) returned ACTIVE
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getTimestamp(7) returned 2026-05-01 12:35:44.894884
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(8) returned updateduser_update
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.next() returned true
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getLong(1) returned 3
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getTimestamp(2) returned 2026-05-01 12:35:45.195873
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(3) returned test_email@example.com
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(4) returned $2a$10$.3Km/bDcghjMbIBa1R3f3uQwQy9owLe9by3bkrCZEZnd/ekkXTTqm
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(5) returned USER
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(6) returned ACTIVE
+2026-05-01T12:35:45.479+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getTimestamp(7) returned 2026-05-01 12:35:45.195873
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(8) returned testuser_email
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.next() returned true
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getLong(1) returned 4
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getTimestamp(2) returned 2026-05-01 12:35:45.444562
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(3) returned test_list1@example.com
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(4) returned $2a$10$ZkNmQmgbOPjGQaM2L50iAu1jsyU9GX9vWkMjkK00ZHZF9xIBghMd2
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(5) returned USER
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(6) returned ACTIVE
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getTimestamp(7) returned 2026-05-01 12:35:45.444562
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.getString(8) returned testuser_list1
+2026-05-01T12:35:45.480+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.482+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 
+|---|---------------------------|---------------------------|-------------------------------------------------------------|-----|-------|---------------------------|-------------------|
+|id |created_at                 |email                      |password                                                     |role |status |updated_at                 |username           |
+|---|---------------------------|---------------------------|-------------------------------------------------------------|-----|-------|---------------------------|-------------------|
+|2  |2026-05-01 12:35:44.620284 |updated_update@example.com |$2a$10$sYjrRddz2ApU10si2JTXo.Rz0k1Z.yK./6t8wf8PZa.y/5C5kYRTu |USER |ACTIVE |2026-05-01 12:35:44.894884 |updateduser_update |
+|3  |2026-05-01 12:35:45.195873 |test_email@example.com     |$2a$10$.3Km/bDcghjMbIBa1R3f3uQwQy9owLe9by3bkrCZEZnd/ekkXTTqm |USER |ACTIVE |2026-05-01 12:35:45.195873 |testuser_email     |
+|4  |2026-05-01 12:35:45.444562 |test_list1@example.com     |$2a$10$ZkNmQmgbOPjGQaM2L50iAu1jsyU9GX9vWkMjkK00ZHZF9xIBghMd2 |USER |ACTIVE |2026-05-01 12:35:45.444562 |testuser_list1     |
+|---|---------------------------|---------------------------|-------------------------------------------------------------|-----|-------|---------------------------|-------------------|
+
+2026-05-01T12:35:45.482+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.next() returned false
+2026-05-01T12:35:45.482+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.483+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. ResultSet.close() returned void
+2026-05-01T12:35:45.483+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.483+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.483+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. PreparedStatement.close() returned 
+2026-05-01T12:35:45.494+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.commit() returned 
+2026-05-01T12:35:45.494+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:45.494+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.setReadOnly(false) returned 
+2026-05-01T12:35:45.503+07:00  WARN 14696 --- [o-auto-1-exec-8] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+2026-05-01T12:35:45.520+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.isClosed() returned false
+2026-05-01T12:35:45.520+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.getWarnings() returned null
+2026-05-01T12:35:45.520+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.clearWarnings() returned 
+2026-05-01T12:35:45.520+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:45.520+07:00  INFO 14696 --- [o-auto-1-exec-8] log4jdbc.log4j2                          : 12. Connection.close() returned 
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateUser_Success" classname="edu.ecommerce.api.controller.UserControllerTest" time="0.227">
+    <system-out><![CDATA[2026-05-01T12:35:45.615+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:45.615+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.new Connection returned 
+2026-05-01T12:35:45.615+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:45.615+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.getAutoCommit() returned true
+2026-05-01T12:35:45.615+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:45.616+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.616+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@6c76c476
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setString(1, "test_success@example.com") returned 
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. select u1_0.id from users u1_0 where u1_0.email='test_success@example.com' fetch first 1 rows 
+only  {executed in 0 ms}
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5b3b0dc
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.next() returned false
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.close() returned void
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.617+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.close() returned 
+2026-05-01T12:35:45.619+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.619+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.username=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@1fd2f220
+2026-05-01T12:35:45.619+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setString(1, "testuser_success") returned 
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. select u1_0.id from users u1_0 where u1_0.username='testuser_success' fetch first 1 rows only  {executed in 0 ms}
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@29daa09e
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.next() returned false
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.close() returned void
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.620+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.close() returned 
+2026-05-01T12:35:45.734+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.734+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.prepareStatement(insert into users (created_at,email,password,role,status,updated_at,username,id) values (?,?,?,?,?,?,?,default), 1) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@ee46940
+2026-05-01T12:35:45.734+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setTimestamp(1, 2026-05-01 12:35:45.733134) returned 
+2026-05-01T12:35:45.734+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setString(2, "test_success@example.com") returned 
+2026-05-01T12:35:45.734+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setString(3, "$2a$10$0g/6AFltFwIjKkSUJTl3NuX7zbCvle9YhDSd24jtRZ8bvUasiAnRO") returned 
+2026-05-01T12:35:45.734+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setString(4, "USER") returned 
+2026-05-01T12:35:45.735+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setString(5, "ACTIVE") returned 
+2026-05-01T12:35:45.735+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setTimestamp(6, 2026-05-01 12:35:45.733134) returned 
+2026-05-01T12:35:45.735+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.setString(7, "testuser_success") returned 
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. insert into users (created_at,email,password,role,status,updated_at,username,id) values ('05/01/2026 
+12:35:45.733','test_success@example.com','$2a$10$0g/6AFltFwIjKkSUJTl3NuX7zbCvle9YhDSd24jtRZ8bvUasiAnRO','USER','ACTIVE','05/01/2026 
+12:35:45.733','testuser_success',default)  {executed in 1 ms}
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. getGeneratedKeys on query: insert into users (created_at,email,password,role,status,updated_at,username,id) 
+values ('05/01/2026 12:35:45.733','test_success@example.com','$2a$10$0g/6AFltFwIjKkSUJTl3NuX7zbCvle9YhDSd24jtRZ8bvUasiAnRO','USER','ACTIVE','05/01/2026 
+12:35:45.733','testuser_success',default)  {executed in 0 ms}
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.getGeneratedKeys() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@660bd3d7
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.getStatement() returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@ee46940
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.getMetaData() returned rsMeta46: columns=1
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.next() returned true
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.getLong(1) returned 5
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|5  |
+|---|
+
+2026-05-01T12:35:45.736+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.next() returned false
+2026-05-01T12:35:45.737+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.close() returned void
+2026-05-01T12:35:45.737+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. ResultSet.close() returned void
+2026-05-01T12:35:45.737+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.737+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.737+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. PreparedStatement.close() returned 
+2026-05-01T12:35:45.737+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.commit() returned 
+2026-05-01T12:35:45.737+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:45.739+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.isClosed() returned false
+2026-05-01T12:35:45.739+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.getWarnings() returned null
+2026-05-01T12:35:45.739+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.clearWarnings() returned 
+2026-05-01T12:35:45.739+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:45.739+07:00  INFO 14696 --- [o-auto-1-exec-9] log4jdbc.log4j2                          : 13. Connection.close() returned 
+]]></system-out>
+  </testcase>
+  <testcase name="testCreateUser_DuplicateEmail" classname="edu.ecommerce.api.controller.UserControllerTest" time="0.188">
+    <system-out><![CDATA[2026-05-01T12:35:45.838+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:45.839+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.new Connection returned 
+2026-05-01T12:35:45.839+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:45.839+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.getAutoCommit() returned true
+2026-05-01T12:35:45.839+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:45.840+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.841+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@5b6ad7e6
+2026-05-01T12:35:45.841+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setString(1, "test_duplicate@example.com") returned 
+2026-05-01T12:35:45.841+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:45.841+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. select u1_0.id from users u1_0 where u1_0.email='test_duplicate@example.com' fetch first 1 
+rows only  {executed in 0 ms}
+2026-05-01T12:35:45.841+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.841+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@6079c111
+2026-05-01T12:35:45.842+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:45.842+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.next() returned false
+2026-05-01T12:35:45.842+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.842+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.close() returned void
+2026-05-01T12:35:45.842+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.842+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.842+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.close() returned 
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.username=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@7e5bb3f0
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setString(1, "testuser_duplicate") returned 
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. select u1_0.id from users u1_0 where u1_0.username='testuser_duplicate' fetch first 1 rows 
+only  {executed in 0 ms}
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@716dc120
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.next() returned false
+2026-05-01T12:35:45.844+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.845+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.close() returned void
+2026-05-01T12:35:45.845+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.845+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.845+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.close() returned 
+2026-05-01T12:35:45.956+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.957+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.prepareStatement(insert into users (created_at,email,password,role,status,updated_at,username,id) values (?,?,?,?,?,?,?,default), 1) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3011ada1
+2026-05-01T12:35:45.958+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setTimestamp(1, 2026-05-01 12:35:45.95603) returned 
+2026-05-01T12:35:45.958+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setString(2, "test_duplicate@example.com") returned 
+2026-05-01T12:35:45.958+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setString(3, "$2a$10$h4idql5Xbc/GCEOQW09GF.1fEd0vUhs7gZVKmpaojrdjAZwHO2hO6") returned 
+2026-05-01T12:35:45.958+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setString(4, "USER") returned 
+2026-05-01T12:35:45.958+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setString(5, "ACTIVE") returned 
+2026-05-01T12:35:45.959+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setTimestamp(6, 2026-05-01 12:35:45.95603) returned 
+2026-05-01T12:35:45.959+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.setString(7, "testuser_duplicate") returned 
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. insert into users (created_at,email,password,role,status,updated_at,username,id) values ('05/01/2026 
+12:35:45.956','test_duplicate@example.com','$2a$10$h4idql5Xbc/GCEOQW09GF.1fEd0vUhs7gZVKmpaojrdjAZwHO2hO6','USER','ACTIVE','05/01/2026 
+12:35:45.956','testuser_duplicate',default)  {executed in 1 ms}
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. getGeneratedKeys on query: insert into users (created_at,email,password,role,status,updated_at,username,id) 
+values ('05/01/2026 12:35:45.956','test_duplicate@example.com','$2a$10$h4idql5Xbc/GCEOQW09GF.1fEd0vUhs7gZVKmpaojrdjAZwHO2hO6','USER','ACTIVE','05/01/2026 
+12:35:45.956','testuser_duplicate',default)  {executed in 0 ms}
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.getGeneratedKeys() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5c083fa5
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.getStatement() returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@3011ada1
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.getMetaData() returned rsMeta52: columns=1
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.next() returned true
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.getLong(1) returned 6
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|6  |
+|---|
+
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.next() returned false
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.close() returned void
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. ResultSet.close() returned void
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.960+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. PreparedStatement.close() returned 
+2026-05-01T12:35:45.961+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.commit() returned 
+2026-05-01T12:35:45.961+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:45.962+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.isClosed() returned false
+2026-05-01T12:35:45.962+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.getWarnings() returned null
+2026-05-01T12:35:45.962+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.clearWarnings() returned 
+2026-05-01T12:35:45.962+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:45.962+07:00  INFO 14696 --- [-auto-1-exec-10] log4jdbc.log4j2                          : 14. Connection.close() returned 
+2026-05-01T12:35:45.981+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:45.981+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.new Connection returned 
+2026-05-01T12:35:45.981+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:45.981+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.getAutoCommit() returned true
+2026-05-01T12:35:45.981+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:45.982+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:45.982+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@560d6cb8
+2026-05-01T12:35:45.982+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. PreparedStatement.setString(1, "test_duplicate@example.com") returned 
+2026-05-01T12:35:45.982+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:45.983+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. select u1_0.id from users u1_0 where u1_0.email='test_duplicate@example.com' fetch first 1 
+rows only  {executed in 1 ms}
+2026-05-01T12:35:45.983+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. ResultSet.new ResultSet returned 
+2026-05-01T12:35:45.983+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@4ecd3f46
+2026-05-01T12:35:45.983+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. ResultSet.next() returned true
+2026-05-01T12:35:45.983+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. ResultSet.getLong(1) returned 6
+2026-05-01T12:35:45.983+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. ResultSet.wasNull() returned false
+2026-05-01T12:35:45.985+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|6  |
+|---|
+
+2026-05-01T12:35:45.985+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. ResultSet.next() returned false
+2026-05-01T12:35:45.985+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:45.985+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. ResultSet.close() returned void
+2026-05-01T12:35:45.985+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:45.985+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:45.985+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. PreparedStatement.close() returned 
+2026-05-01T12:35:45.985+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.rollback() returned 
+2026-05-01T12:35:45.985+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:45.987+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.isClosed() returned false
+2026-05-01T12:35:45.987+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.getWarnings() returned null
+2026-05-01T12:35:45.987+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.clearWarnings() returned 
+2026-05-01T12:35:45.987+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:45.987+07:00  INFO 14696 --- [o-auto-1-exec-4] log4jdbc.log4j2                          : 15. Connection.close() returned 
+]]></system-out>
+  </testcase>
+  <testcase name="testGetUserById_Success" classname="edu.ecommerce.api.controller.UserControllerTest" time="0.261">
+    <system-out><![CDATA[2026-05-01T12:35:46.066+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:46.066+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.new Connection returned 
+2026-05-01T12:35:46.066+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:46.066+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.getAutoCommit() returned true
+2026-05-01T12:35:46.066+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:46.068+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:46.068+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.email=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@602bd10a
+2026-05-01T12:35:46.068+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setString(1, "test_get_by_id@example.com") returned 
+2026-05-01T12:35:46.068+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:46.068+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. select u1_0.id from users u1_0 where u1_0.email='test_get_by_id@example.com' fetch first 1 
+rows only  {executed in 0 ms}
+2026-05-01T12:35:46.068+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.new ResultSet returned 
+2026-05-01T12:35:46.068+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@693cd81b
+2026-05-01T12:35:46.069+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:46.069+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.next() returned false
+2026-05-01T12:35:46.069+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:46.069+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.close() returned void
+2026-05-01T12:35:46.069+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:46.069+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:46.069+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.close() returned 
+2026-05-01T12:35:46.070+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:46.070+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.prepareStatement(select u1_0.id from users u1_0 where u1_0.username=? fetch first ? rows only, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@33c43a69
+2026-05-01T12:35:46.070+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setString(1, "testuser_get_by_id") returned 
+2026-05-01T12:35:46.070+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setInt(2, 1) returned 
+2026-05-01T12:35:46.070+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. select u1_0.id from users u1_0 where u1_0.username='testuser_get_by_id' fetch first 1 rows 
+only  {executed in 0 ms}
+2026-05-01T12:35:46.070+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.new ResultSet returned 
+2026-05-01T12:35:46.071+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@6ed012f6
+2026-05-01T12:35:46.071+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|---|
+
+2026-05-01T12:35:46.071+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.next() returned false
+2026-05-01T12:35:46.071+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:46.071+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.close() returned void
+2026-05-01T12:35:46.071+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:46.071+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:46.072+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.close() returned 
+2026-05-01T12:35:46.179+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:46.179+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.prepareStatement(insert into users (created_at,email,password,role,status,updated_at,username,id) values (?,?,?,?,?,?,?,default), 1) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@42c96cfd
+2026-05-01T12:35:46.180+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setTimestamp(1, 2026-05-01 12:35:46.179739) returned 
+2026-05-01T12:35:46.180+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setString(2, "test_get_by_id@example.com") returned 
+2026-05-01T12:35:46.180+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setString(3, "$2a$10$8YRBJBVjy4DIGv2VDDQyAeiYxWeHtpyMvfItMwNTWmRXp4yqQScFy") returned 
+2026-05-01T12:35:46.180+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setString(4, "USER") returned 
+2026-05-01T12:35:46.180+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setString(5, "ACTIVE") returned 
+2026-05-01T12:35:46.180+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setTimestamp(6, 2026-05-01 12:35:46.179739) returned 
+2026-05-01T12:35:46.180+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.setString(7, "testuser_get_by_id") returned 
+2026-05-01T12:35:46.181+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. insert into users (created_at,email,password,role,status,updated_at,username,id) values ('05/01/2026 
+12:35:46.179','test_get_by_id@example.com','$2a$10$8YRBJBVjy4DIGv2VDDQyAeiYxWeHtpyMvfItMwNTWmRXp4yqQScFy','USER','ACTIVE','05/01/2026 
+12:35:46.179','testuser_get_by_id',default)  {executed in 1 ms}
+2026-05-01T12:35:46.181+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.executeUpdate() returned 1
+2026-05-01T12:35:46.181+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. getGeneratedKeys on query: insert into users (created_at,email,password,role,status,updated_at,username,id) 
+values ('05/01/2026 12:35:46.179','test_get_by_id@example.com','$2a$10$8YRBJBVjy4DIGv2VDDQyAeiYxWeHtpyMvfItMwNTWmRXp4yqQScFy','USER','ACTIVE','05/01/2026 
+12:35:46.179','testuser_get_by_id',default)  {executed in 0 ms}
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.new ResultSet returned 
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.getGeneratedKeys() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@5ed84399
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.getStatement() returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@42c96cfd
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.getMetaData() returned rsMeta60: columns=1
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.next() returned true
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.getLong(1) returned 7
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.wasNull() returned false
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 
+|---|
+|id |
+|---|
+|7  |
+|---|
+
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.next() returned false
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.close() returned void
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. ResultSet.close() returned void
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:46.182+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. PreparedStatement.close() returned 
+2026-05-01T12:35:46.183+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.commit() returned 
+2026-05-01T12:35:46.183+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:46.186+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.isClosed() returned false
+2026-05-01T12:35:46.186+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.getWarnings() returned null
+2026-05-01T12:35:46.186+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.clearWarnings() returned 
+2026-05-01T12:35:46.186+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:46.186+07:00  INFO 14696 --- [o-auto-1-exec-2] log4jdbc.log4j2                          : 16. Connection.close() returned 
+2026-05-01T12:35:46.212+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection opened. {executed in 0ms} 
+2026-05-01T12:35:46.212+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.new Connection returned 
+2026-05-01T12:35:46.212+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : null. DataSource.getConnection() returned 
+2026-05-01T12:35:46.212+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.setReadOnly(true) returned 
+2026-05-01T12:35:46.212+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.getAutoCommit() returned true
+2026-05-01T12:35:46.213+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.setAutoCommit(false) returned 
+2026-05-01T12:35:46.213+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. PreparedStatement.new PreparedStatement returned 
+2026-05-01T12:35:46.213+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.prepareStatement(select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username from users u1_0 where u1_0.id=?, 1003, 1007) returned net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy@7d5899d4
+2026-05-01T12:35:46.213+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. PreparedStatement.setLong(1, 7) returned 
+2026-05-01T12:35:46.214+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. select u1_0.id,u1_0.created_at,u1_0.email,u1_0.password,u1_0.role,u1_0.status,u1_0.updated_at,u1_0.username 
+from users u1_0 where u1_0.id=7  {executed in 1 ms}
+2026-05-01T12:35:46.214+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.new ResultSet returned 
+2026-05-01T12:35:46.214+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. PreparedStatement.executeQuery() returned net.sf.log4jdbc.sql.jdbcapi.ResultSetSpy@385a081b
+2026-05-01T12:35:46.214+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.next() returned true
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.getTimestamp(2) returned 2026-05-01 12:35:46.179739
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.wasNull() returned false
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.getString(3) returned test_get_by_id@example.com
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.wasNull() returned false
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.getString(4) returned $2a$10$8YRBJBVjy4DIGv2VDDQyAeiYxWeHtpyMvfItMwNTWmRXp4yqQScFy
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.wasNull() returned false
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.getString(5) returned USER
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.wasNull() returned false
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.getString(6) returned ACTIVE
+2026-05-01T12:35:46.215+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.wasNull() returned false
+2026-05-01T12:35:46.216+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.getTimestamp(7) returned 2026-05-01 12:35:46.179739
+2026-05-01T12:35:46.216+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.wasNull() returned false
+2026-05-01T12:35:46.216+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.getString(8) returned testuser_get_by_id
+2026-05-01T12:35:46.216+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.wasNull() returned false
+2026-05-01T12:35:46.217+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 
+|---------|---------------------------|---------------------------|-------------------------------------------------------------|-----|-------|---------------------------|-------------------|
+|id       |created_at                 |email                      |password                                                     |role |status |updated_at                 |username           |
+|---------|---------------------------|---------------------------|-------------------------------------------------------------|-----|-------|---------------------------|-------------------|
+|[unread] |2026-05-01 12:35:46.179739 |test_get_by_id@example.com |$2a$10$8YRBJBVjy4DIGv2VDDQyAeiYxWeHtpyMvfItMwNTWmRXp4yqQScFy |USER |ACTIVE |2026-05-01 12:35:46.179739 |testuser_get_by_id |
+|---------|---------------------------|---------------------------|-------------------------------------------------------------|-----|-------|---------------------------|-------------------|
+
+2026-05-01T12:35:46.217+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.next() returned false
+2026-05-01T12:35:46.217+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. PreparedStatement.isClosed() returned false
+2026-05-01T12:35:46.217+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. ResultSet.close() returned void
+2026-05-01T12:35:46.217+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. PreparedStatement.getMaxRows() returned 0
+2026-05-01T12:35:46.217+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. PreparedStatement.getQueryTimeout() returned 0
+2026-05-01T12:35:46.218+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. PreparedStatement.close() returned 
+2026-05-01T12:35:46.218+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.commit() returned 
+2026-05-01T12:35:46.218+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.setAutoCommit(true) returned 
+2026-05-01T12:35:46.218+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.setReadOnly(false) returned 
+2026-05-01T12:35:46.220+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.isClosed() returned false
+2026-05-01T12:35:46.221+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.getWarnings() returned null
+2026-05-01T12:35:46.222+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.clearWarnings() returned 
+2026-05-01T12:35:46.222+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection closed. {executed in 0ms} 
+2026-05-01T12:35:46.222+07:00  INFO 14696 --- [o-auto-1-exec-3] log4jdbc.log4j2                          : 17. Connection.close() returned 
+]]></system-out>
+  </testcase>
+</testsuite>
