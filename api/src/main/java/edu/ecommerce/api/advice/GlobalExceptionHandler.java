@@ -1,9 +1,11 @@
 package edu.ecommerce.api.advice;
 
 import edu.ecommerce.core.exception.DuplicateEmailException;
+import edu.ecommerce.core.exception.InvalidOrderTransitionException;
 import edu.ecommerce.core.exception.InvalidUserDataException;
+import edu.ecommerce.core.exception.OrderNotFoundException;
 import edu.ecommerce.core.exception.UserNotFoundException;
-import lombok.Data;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,6 +37,26 @@ public class GlobalExceptionHandler {
             LocalDateTime.now()
         );
         return ResponseEntity.status(HttpStatus.CONFLICT).body(error);
+    }
+
+    @ExceptionHandler(OrderNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleOrderNotFound(OrderNotFoundException ex) {
+        ErrorResponse error = new ErrorResponse(
+            "ORDER_NOT_FOUND",
+            ex.getMessage(),
+            LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
+    }
+
+    @ExceptionHandler(InvalidOrderTransitionException.class)
+    public ResponseEntity<ErrorResponse> handleInvalidOrderTransition(InvalidOrderTransitionException ex) {
+        ErrorResponse error = new ErrorResponse(
+            "INVALID_ORDER_TRANSITION",
+            ex.getMessage(),
+            LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
 
     @ExceptionHandler(InvalidUserDataException.class)
@@ -72,7 +94,7 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
     }
 
-    @Data
+    @Getter
     @RequiredArgsConstructor
     public static class ErrorResponse {
         private final String code;

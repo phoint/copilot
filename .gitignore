@@ -25,3 +25,6 @@ Thumbs.db
 # Keep only project source and config files
 !pom.xml
 !/src/
+!api/src/
+!core/src/
+!service/src/

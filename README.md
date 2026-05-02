@@ -1,43 +1,117 @@
-# Spring Boot User Management Implementation
+# Spring Boot E-Commerce System
 
 ## Project Overview
 
-This is a Spring Boot application implementing reusable User Management building blocks for an e-commerce system. The implementation follows best practices for layered architecture, validation, security, and testing.
+This is a comprehensive Spring Boot application implementing an e-commerce system with User Management, Product Catalog, Category Management, and Order Service with advanced state machine patterns. The implementation follows best practices for layered architecture, validation, security, state management, and testing.
 
 ## Question to Answer
 
-### 1. How does modularization in Spring Boot improve code maintainability?
+### 1. Why is it important to use @Transactional on service methods that modify multiple entities (e.g., creating an Order and updating Product stock)? What could go wrong without it?
+Using `@Transactional` on service methods that modify multiple entities is crucial for ensuring data integrity and consistency. When a method is annotated with `@Transactional`, it means that all operations within that method are executed within a single transaction context. If any operation fails (e.g., an exception is thrown), the entire transaction will be rolled back, preventing partial updates to the database. For example, when creating an Order, you might need to save the Order entity and also update the stock quantity of the associated Product. If the Order is saved successfully but the Product stock update fails (e.g., due to a database constraint violation), without `@Transactional`, the Order would be created while the Product stock remains unchanged, leading to data inconsistency. With `@Transactional`, if the Product stock update fails, the Order creation will also be rolled back, ensuring that the database remains in a consistent state.
 
-Modularization in Spring Boot improves code maintainability by:
-- **Separation of Concerns**: Each module (e.g., User Management) encapsulates related functionality, making it easier to understand and manage.
-- **Reusability**: Modules can be reused across different parts of the application or even in other projects, reducing code duplication.
-- **Scalability**: As the application grows, new features can be added to specific modules without affecting others, allowing for easier scaling.
-- **Testing**: Modules can be tested independently, improving test coverage and reliability.
+### 2. Explain the difference between a JPQL query and a Native SQL query in a @Query annotation. When would you choose one over the other?
+A JPQL (Java Persistence Query Language) query is a query language that operates on the entity objects and their relationships defined in the JPA context. It is database-agnostic and allows you to write queries using the entity model rather than the underlying database schema. For example, you can query for `Order` entities based on their `status` without worrying about the actual table structure.
 
-### 2. What are some limitations of code generation tools like GitHub Copilot?
+A Native SQL query, on the other hand, is a query that is written in the native SQL dialect of the underlying database. It allows you to leverage database-specific features and optimizations but makes your code less portable across different databases.
 
-While code generation tools like GitHub Copilot can speed up development, they have limitations:
-- **Context Awareness**: They may not fully understand the broader context of the application, leading to code that is syntactically correct but semantically inappropriate.
-- **Security Risks**: Generated code may include vulnerabilities if not reviewed carefully, such as hardcoded credentials or insecure practices.
-- **Quality Variability**: The quality of generated code can vary, and it may not always follow best practices or coding standards.
-- **Dependency on Training Data**: The generated code is based on patterns learned from existing code, which may not always be up-to-date or relevant to the specific use case.
-- **Lack of Creativity**: It may not be able to come up with innovative solutions or handle complex logic that requires human intuition and experience.
-### 3. What mechanisms can be employed to secure REST APIs in the user management system?
-To secure REST APIs in the user management system, the following mechanisms can be employed:
-- **Authentication**: Implementing authentication mechanisms such as JWT (JSON Web Tokens) or OAuth to verify the identity of users accessing the API.
-- **Authorization**: Using role-based access control (RBAC) to restrict access to certain endpoints based on user roles (e.g., ADMIN, USER).
-- **Input Validation**: Validating all incoming data to prevent injection attacks and ensure data integrity.
-- **HTTPS**: Enforcing HTTPS to encrypt data in transit and protect against man-in-the-middle attacks.
-- **Rate Limiting**: Implementing rate limiting to prevent abuse and protect against denial-of-service (DoS) attacks.
-- **CORS**: Configuring Cross-Origin Resource Sharing (CORS) to control which domains can access the API.
-- **Security Headers**: Adding security headers (e.g., Content-Security-Policy, X-Content-Type-Options) to protect against common web vulnerabilities.
+You would choose a JPQL query when you want to write database-agnostic code and work with the entity model. You would choose a Native SQL query when you need to use database-specific features or when performance is critical and you need to optimize the query for a specific database.
 
+### 3. In the context of our OrderItem entity, why is storing the price directly better than just linking to the Product entity and fetching its price?
+Storing the price directly in the OrderItem entity is better than just linking to the Product entity and fetching its price because it captures the price at the time of the order. This is important for historical accuracy and consistency. If you only link to the Product entity, any changes to the product's price after the order is placed would affect the order's total amount, which can lead to discrepancies and confusion for both customers and administrators. By storing the price directly in the OrderItem, you ensure that the order reflects the correct pricing information as it was at the time of purchase, regardless of any future changes to the product's price. This also simplifies calculations for discounts, promotions, and refunds, as you have a clear record of what was charged for each item in the order.
 ## Architecture
 
 The application uses a multi-module architecture:
-- **core module**: Contains core entities, dtos, and exceptions
-- **service module**: Contains service interfaces and implementations
-- **api module**: Contains REST controllers and API-related configurations
+- **core module**: Contains core entities, DTOs, exceptions, enums, and pricing modifiers
+- **service module**: Contains service interfaces, implementations, repositories, and Spring State Machine configuration
+- **api module**: Contains REST controllers, global exception handler, and security configuration
+
+**Dependency Flow**: `api → service → core`
+
+### Module Responsibilities
+- **core**: Domain models, validation rules, extension points (OrderPricingModifier interface)
+- **service**: Business logic, transactions, state machine orchestration, repository access
+- **api**: HTTP contracts, request/response marshaling, exception handling, security
+
+## 🆕 Order Service with Spring State Machine
+
+### Overview
+The Order Service implements a sophisticated order lifecycle using **Spring State Machine 4.0.0** with **guard conditions** to enforce business rules. This design is fully extensible for future services (Discount, Promotion, Membership, Shipping) without modifying existing code.
+
+### Order States & Transitions
+```
+PENDING → CONFIRMED → PROCESSING → SHIPPED → DELIVERED → REFUNDED
+   ↓        ↓             ↓          (terminal)
+CANCELLED (terminal)
+```
+
+**Terminal States**: CANCELLED, REFUNDED (no outgoing transitions)
+
+### State Machine Features
+- **Spring State Machine 4.0.0**: Framework-based state management with reactive APIs
+- **Guard Conditions**: Business rule validation before transitions
+  - `hasItems()` - Order must contain items
+  - `hasValidTotal()` - Order total must be non-negative
+  - `hasShippingAddress()` - Shipping address required for SHIP transition
+  - `canBeCancelled()` - Cannot cancel from terminal states
+  - `withinMaxOrderValue()` - Fraud prevention ($100k max)
+  - `notAlreadyRefunded()` - Idempotency check
+
+- **Extensible Pricing**: `OrderPricingModifier` interface allows future services to hook pricing logic without touching order code
+  - Discount Service implementation
+  - Promotion Service implementation
+  - Membership Service implementation
+  - Shipping Service implementation
+
+### Order Service Components
+
+#### Core Entities
+- **Order**: Main order aggregate with bi-directional relationship to OrderItem
+  - Status (enum), shippingAddress, promoCode, discountAmount, shippingCost, membershipDiscount, totalAmount
+  - Audit timestamps (createdAt, updatedAt)
+  - Future-service columns for stable API contracts
+
+- **OrderItem**: Order line items (leaf entity)
+  - References to Order and Product
+  - quantity, unitPrice (snapshot at order time)
+
+#### DTOs
+- **OrderRequest**: Create order with items, shipping address, promo code
+- **OrderResponse**: Complete order view with flattened user/product details
+- **OrderUpdateRequest**: Partial update (optional fields)
+- **OrderItemRequest/Response**: Line item transfer objects
+
+#### Services
+- **OrderService** (interface): Define order operations
+- **OrderServiceImpl**: Implements service with Spring State Machine integration
+  - Injects `StateMachineFactory<OrderStatus, OrderEvent>`
+  - `applyTransition()` method orchestrates state machine + guard validation
+  - Total amount recalculation with pricing modifiers
+  - Pagination support for listing
+
+#### Repositories
+- **OrderRepository**: JPA with custom finders (byUserId, byStatus)
+- **OrderItemRepository**: JPA with order item queries
+
+#### Configuration
+- **OrderStateMachineConfig**: `@EnableStateMachineFactory` with all state/transition/guard configuration
+- **OrderEvent** enum: CONFIRM, START_PROCESSING, SHIP, DELIVER, CANCEL, REFUND
+
+#### REST Endpoints
+```
+POST   /api/v1/orders                 - Create order
+GET    /api/v1/orders/:id             - Get order by ID
+GET    /api/v1/orders                 - List all orders (paginated)
+GET    /api/v1/orders/user/:userId    - Get orders by user
+PATCH  /api/v1/orders/:id/status      - Update order status (state transition)
+PATCH  /api/v1/orders/:id             - Update order (partial)
+POST   /api/v1/orders/:id/cancel      - Cancel order
+```
+
+#### Exception Handling
+- **OrderNotFoundException**: 404 when order not found
+- **InvalidOrderTransitionException**: 400 when state transition blocked by state machine or guards
+
+---
 
 ## Components Implemented
 
@@ -46,11 +120,23 @@ The application uses a multi-module architecture:
   - Fields: id, username, email, password (hashed), role, status, createdAt, updatedAt
   - Constraints: Unique email, audit timestamps
   - Uses Lombok for boilerplate reduction
+- **Product Entity** (`src/main/java/edu/ecommerce/product/entity/Product.java`)
+  - Fields: id, name, description, price, stockQuantity, category (ManyToOne), createdAt, updatedAt
+  - Constraints: Non-negative price and stock, audit timestamps
+- **Category Entity** (`src/main/java/edu/ecommerce/category/entity/Category.java`)
+  - Fields: id, name, description, createdAt, updatedAt
+  - Constraints: Unique name, audit timestamps
 
 ### Data Access
 - **UserRepository** (`src/main/java/edu/ecommerce/user/repository/UserRepository.java`)
   - Extends JpaRepository for CRUD operations
   - Custom finder methods for email and username
+- **ProductRepository** (`src/main/java/edu/ecommerce/product/repository/ProductRepository.java`)
+  - Extends JpaRepository for CRUD operations
+  - Custom finder methods for product queries
+- **CategoryRepository** (`src/main/java/edu/ecommerce/category/repository/CategoryRepository.java`)
+  - Extends JpaRepository for CRUD operations
+  - Custom finder methods for category queries
 
 ### Business Logic
 - **UserService** (`src/main/java/edu/ecommerce/user/service/UserService.java` - Interface)
@@ -58,9 +144,26 @@ The application uses a multi-module architecture:
   - Password hashing using BCrypt
   - Transaction management
   - User creation, retrieval, update, deletion
+- Validation logic for user data
+- **ProductService** (`src/main/java/edu/ecommerce/product/service/ProductService.java` - Interface)
+- **ProductServiceImpl** (`src/main/java/edu/ecommerce/product/service/ProductServiceImpl.java` - Implementation)
+  - Product creation, retrieval, update, deletion
+  - Validation logic for product data
+- **CategoryService** (`src/main/java/edu/ecommerce/category/service/CategoryService.java` - Interface)
+- **CategoryServiceImpl** (`src/main/java/edu/ecommerce/category/service/CategoryServiceImpl.java` - Implementation)
+  - Category creation, retrieval, update, deletion
+  - Validation logic for category data
 
 ### REST API
 - **UserController** (`src/main/java/edu/ecommerce/user/controller/UserController.java`)
+  - CRUD endpoints with pagination support
+  - Input validation using Bean Validation
+  - Error handling with custom exceptions
+- **ProductController** (`src/main/java/edu/ecommerce/product/controller/ProductController.java`)
+  - CRUD endpoints with pagination support
+  - Input validation using Bean Validation
+  - Error handling with custom exceptions
+- **CategoryController** (`src/main/java/edu/ecommerce/category/controller/CategoryController.java`)
   - CRUD endpoints with pagination support
   - Input validation using Bean Validation
   - Error handling with custom exceptions
@@ -70,6 +173,14 @@ The application uses a multi-module architecture:
   - Validation: Username (3-50 chars), Email (valid format), Password (8-30 chars, at least one letter and digit), Role (ADMIN/USER)
 - **UserResponse** (`src/main/java/edu/ecommerce/user/dto/UserResponse.java`)
   - Excludes sensitive fields like password
+- **ProductRequest** (`src/main/java/edu/ecommerce/product/dto/ProductRequest.java`)
+  - Validation: Name (3-100 chars), Description (optional), Price (positive), Stock Quantity (non-negative)
+- **ProductResponse** (`src/main/java/edu/ecommerce/product/dto/ProductResponse.java`)
+  - Includes product details without sensitive information
+- **CategoryRequest** (`src/main/java/edu/ecommerce/category/dto/CategoryRequest.java`)
+  - Validation: Name (3-100 chars), Description (optional)
+- **CategoryResponse** (`src/main/java/edu/ecommerce/category/dto/CategoryResponse.java`)
+  - Includes category details without sensitive information
 
 ### Exception Handling
 - **GlobalExceptionHandler** (`src/main/java/edu/ecommerce/GlobalExceptionHandler.java`)
