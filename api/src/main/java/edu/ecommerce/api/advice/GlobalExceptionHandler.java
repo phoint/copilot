@@ -4,6 +4,7 @@ import edu.ecommerce.core.exception.DuplicateEmailException;
 import edu.ecommerce.core.exception.InvalidOrderTransitionException;
 import edu.ecommerce.core.exception.InvalidUserDataException;
 import edu.ecommerce.core.exception.OrderNotFoundException;
+import edu.ecommerce.core.exception.ProductNotFoundException;
 import edu.ecommerce.core.exception.UserNotFoundException;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +24,16 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleUserNotFound(UserNotFoundException ex) {
         ErrorResponse error = new ErrorResponse(
             "USER_NOT_FOUND",
+            ex.getMessage(),
+            LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
+    }
+
+    @ExceptionHandler(ProductNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleProductNotFound(ProductNotFoundException ex) {
+        ErrorResponse error = new ErrorResponse(
+            "PRODUCT_NOT_FOUND",
             ex.getMessage(),
             LocalDateTime.now()
         );

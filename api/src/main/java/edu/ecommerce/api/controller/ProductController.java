@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.ecommerce.core.dto.ProductRequest;
@@ -19,6 +20,9 @@ import edu.ecommerce.core.dto.ProductUpdateRequest;
 import edu.ecommerce.service.ProductService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 // rest controller for product management (CRUD operations, listing, etc.)
 @RestController
@@ -56,6 +60,23 @@ public class ProductController {
     @GetMapping
     public ResponseEntity<Page<ProductResponse>> listAllProducts(Pageable pageable) {
         Page<ProductResponse> products = productService.listAllProducts(pageable);
+        return ResponseEntity.ok(products);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<ProductResponse>> getAllProducts() {
+        List<ProductResponse> products = productService.getAllProducts();
+        return ResponseEntity.ok(products);
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<Page<ProductResponse>> searchProducts(
+        @RequestParam(required = false) String keyword,
+        @RequestParam(required = false) Long categoryId,
+        @RequestParam(required = false) BigDecimal minPrice,
+        @RequestParam(required = false) BigDecimal maxPrice,
+        Pageable pageable) {
+        Page<ProductResponse> products = productService.searchProducts(keyword, categoryId, minPrice, maxPrice, pageable);
         return ResponseEntity.ok(products);
     }
 }
