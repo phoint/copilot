@@ -54,20 +54,20 @@ public class OrderGuards {
     public Guard<OrderStatus, OrderEvent> notAlreadyRefunded() {
         return context -> {
             Order order = extractOrder(context);
-            return order != null;
+            if (order == null) return false;
+            return order.getStatus() != OrderStatus.REFUNDED;
         };
     }
 
     /**
-     * Guard: Ensure order can be cancelled (not already terminal).
+     * Guard: Ensure order can be cancelled (only from PENDING, CONFIRMED, PROCESSING).
      */
     public Guard<OrderStatus, OrderEvent> canBeCancelled() {
         return context -> {
             Order order = extractOrder(context);
             if (order == null) return false;
-            // Can only cancel non-cancelled, non-refunded orders
             OrderStatus status = order.getStatus();
-            return status != OrderStatus.CANCELLED && status != OrderStatus.REFUNDED;
+            return status == OrderStatus.PENDING || status == OrderStatus.CONFIRMED || status == OrderStatus.PROCESSING;
         };
     }
 
